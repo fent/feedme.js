@@ -67,9 +67,15 @@ Signal to the parser that writing is done. It returns the feed as a Javascript o
 `function (item) { }`
 Emitted whenever the parser finds a new feed item. An item can be inside an `<item>` or <entry>` tag.
 
-###Event: <tag>
+###Event: `tagname`
 `function (value) { }`
-Emitted whenever a tag on the root of the document is finished parsing. The root being the `<channel>` or `<feed>` tag.
+Emitted whenever a tag on the root of the document is finished parsing. The root being the `<channel>` or `<feed>` tag. Example:
+
+```javascript
+parser.on('description', function(d) {
+  // do something
+});
+```
 
 ###Event: 'error'
 From the sax-js parser. Emitted when there is an error parsing the document.
