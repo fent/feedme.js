@@ -1,0 +1,26 @@
+{
+  "name": "feedme",
+  "description": "RSS/Atom feed parser",
+  "keywords": ["feed", "rss", "atom", "parser"],
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fent/feedme.js.git"
+  },
+  "author": "Roly Fentanes (https://github.com/fent)",
+  "main": "./lib/feedme.js",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "sax": ">=0.1.11",
+    "underscore": ">=1.1.7"
+  },
+  "devDependencies": {
+    "expresso": ">=0.9.0"
+  },
+  "licenses": [ {
+    "type": "MIT",
+    "url" : "http://github.com/fent/feedme.js/raw/master/LICENSE"
+  }]
+}
