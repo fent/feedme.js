@@ -37,20 +37,25 @@ Write to the parser.
 ###parser.done()
 Signal to the parser that writing is done. It returns the feed as a Javascript object. Subelements are put as children objects with their names as keys. When one object has more than one child of the same name, they are put into an array. Items are always put into an array. Example from the `atom.xml` test:
 
-```javascript
-{ title: 
-   { '$attr': { type: 'text' },
-     '$text': 'dive into mark' },
+```javascript{ title: { type: 'text', text: 'dive into mark' },
   subtitle: 
-   { '$attr': { type: 'html' },
-     '$text': 'A <em>lot</em> of effort\nwent into making this effortless' },
+   { type: 'html',
+     text: 'A <em>lot</em> of effort\nwent into making this effortless' },
   updated: '2005-07-31T12:29:29Z',
   id: 'tag:example.org,2003:3',
-  link: [ { '$attr': [Object] }, { '$attr': [Object] } ],
+  link: 
+   [ { rel: 'alternate',
+       type: 'text/html',
+       hreflang: 'en',
+       href: 'http://example.org/' },
+     { rel: 'self',
+       type: 'application/atom+xml',
+       href: 'http://example.org/feed.atom' } ],
   rights: 'Copyright (c) 2003, Mark Pilgrim',
   generator: 
-   { '$attr': { uri: 'http://www.example.com/', version: '1.0' },
-     '$text': 'Example Toolkit' },
+   { uri: 'http://www.example.com/',
+     version: '1.0',
+     text: 'Example Toolkit' },
   items: 
    [ { title: 'Atom draft-07 snapshot',
        link: [Object],
