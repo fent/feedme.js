@@ -37,7 +37,8 @@ Write to the parser.
 ###parser.done()
 Signal to the parser that writing is done. It returns the feed as a Javascript object. Subelements are put as children objects with their names as keys. When one object has more than one child of the same name, they are put into an array. Items are always put into an array. Example from the `atom.xml` test:
 
-```javascript{ title: { type: 'text', text: 'dive into mark' },
+```javascript
+{ title: { type: 'text', text: 'dive into mark' },
   subtitle: 
    { type: 'html',
      text: 'A <em>lot</em> of effort\nwent into making this effortless' },
