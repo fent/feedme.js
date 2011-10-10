@@ -8,16 +8,16 @@ exports['Parse an Atom file'] = function(beforeExit, assert) {
 
   parser.on('title', function(data) {
     assert.deepEqual(data, {
-      $attr: { type: 'text' },
-      $text: 'dive into mark'
+      type: 'text',
+      text: 'dive into mark'
     });
     events++;
   });
 
   parser.on('subtitle', function(data) {
     assert.deepEqual(data, {
-      $attr: { type: 'html' },
-      $text: 'A <em>lot</em> of effort\nwent into making this effortless'
+      type: 'html',
+      text: 'A <em>lot</em> of effort\nwent into making this effortless'
     });
     events++;
   });
@@ -34,22 +34,18 @@ exports['Parse an Atom file'] = function(beforeExit, assert) {
 
   parser.once('link', function(data) {
     assert.deepEqual(data, {
-      $attr: {
-        rel: 'alternate',
-        type: 'text/html',
-        hreflang: 'en',
-        href: 'http://example.org/'
-      }
+      rel: 'alternate',
+      type: 'text/html',
+      hreflang: 'en',
+      href: 'http://example.org/'
     });
     events++;
 
     parser.once('link', function(data) {
       assert.deepEqual(data, {
-        $attr: {
-          rel: 'self',
-          type: 'application/atom+xml',
-          href: 'http://example.org/feed.atom'
-        }
+        rel: 'self',
+        type: 'application/atom+xml',
+        href: 'http://example.org/feed.atom'
       });
       events++;
     });
@@ -62,8 +58,8 @@ exports['Parse an Atom file'] = function(beforeExit, assert) {
 
   parser.on('generator', function(data) {
     assert.deepEqual(data, {
-      $attr: { uri: 'http://www.example.com/', version: '1.0' },
-      $text: 'Example Toolkit'
+      uri: 'http://www.example.com/', version: '1.0',
+      text: 'Example Toolkit'
     });
     events++;
   });
