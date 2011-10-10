@@ -10,7 +10,8 @@ TEXT_REGEXP = /\n( {2})+|( {4})+|(\t)+$/m
 childTag = (parser, parent, node, parentcb) ->
   obj = {}
   if not isEmpty node.attributes
-    obj.$attr = node.attributes
+    for own property of node.attributes
+      obj[property] = node.attributes[property]
 
   gottext = ''
   textf = (text) ->
@@ -34,7 +35,7 @@ childTag = (parser, parent, node, parentcb) ->
       if isEmpty obj
         obj = gottext
       else
-        obj.$text = gottext
+        obj.text = gottext
 
     # only turn a value into an array if there is more than
     # one tag with the same name
