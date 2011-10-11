@@ -6,7 +6,7 @@ isEmpty = (obj) ->
   obj? and 0 is (key for own key of obj).length
 
 
-TEXT_REGEXP = /\n( {2})+|( {4})+|(\t)+$/m
+TEXT_REGEXP = /\n(( {3})+|( {2})+|( {4})+|(\t)+)$/m
 childTag = (parser, parent, node, parentcb) ->
   obj = {}
   if not isEmpty node.attributes
@@ -58,21 +58,23 @@ childTag = (parser, parent, node, parentcb) ->
 
 
 # removes leading white space from indentation
-TRIM_REGEXP = /^( {2})+|( {4})+|(\t)+/m
+TRIM_REGEXP = /^( {3})+|( {2})+|( {4})+|(\t)+$/m
 trimIndent = (str) ->
-  rs = TRIM_REGEXP.exec str
-  if rs isnt null
-    split = str.split '\n'
-    indent = rs[1] or rs[2] or rs[3]
+  split = str.split '\n'
+  if split.length and (rs = TRIM_REGEXP.exec split[split.length - 1])
+    indent = rs[1] or rs[2] or rs[3] or rs[4]
 
     # check start and end
-    endindent = rs[0].substring(0, rs[0].length - indent.length)
-    return str if split.shift() isnt '' or split.pop() isnt endindent
+    return str if split.shift() isnt ''
+    split.pop()
+
+    # get real indent
+    wholeindent = rs[0] + indent
 
     # check every start of each line starts with the same indent
     for s, i in split
-      return str if s.indexOf(rs[0]) isnt 0
-      split[i] = s.substr(rs[0].length)
+      return str if s.indexOf(wholeindent) isnt 0
+      split[i] = s.substr(wholeindent.length)
     str = split.join '\n'
   str
 
