@@ -2,75 +2,115 @@ var FeedMe = require('../lib/feedme'),
       fs = require('fs');
 
 
+var feed = {
+  title: 'Liftoff News',
+  link: 'http://liftoff.msfc.nasa.gov/',
+  description: 'Liftoff to Space Exploration.',
+  language: 'en-us',
+  pubdate: 'Tue, 10 Jun 2003 04:00:00 GMT',
+  lastbuilddate: 'Tue, 10 Jun 2003 09:41:01 GMT',
+  docs: 'http://blogs.law.harvard.edu/tech/rss',
+  generator: 'Weblog Editor 2.0',
+  managingeditor: 'editor@example.com',
+  webmaster: 'webmaster@example.com',
+  items:  [
+    {
+      title: 'Star City',
+      link: 'http://liftoff.msfc.nasa.gov/news/2003/news-starcity.asp',
+      description: 'How do Americans get ready to work with Russians aboard the International Space Station? They take a crash course in culture, language and protocol at Russia\'s <a href="http://howe.iki.rssi.ru/GCTC/gctc_e.htm">Star City</a>.',
+      pubdate: 'Tue, 03 Jun 2003 09:39:21 GMT',
+      guid: 'http://liftoff.msfc.nasa.gov/2003/06/03.html#item573'
+    },
+    {
+      description: 'Sky watchers in Europe, Asia, and parts of Alaska and Canada will experience a <a href="http://science.nasa.gov/headlines/y2003/30may_solareclipse.htm">partial eclipse of the Sun</a> on Saturday, May 31st.',
+      pubdate: 'Fri, 30 May 2003 11:06:42 GMT',
+      guid: 'http://liftoff.msfc.nasa.gov/2003/05/30.html#item572'    },
+    {
+      title: 'The Engine That Does More',
+      link: 'http://liftoff.msfc.nasa.gov/news/2003/news-VASIMR.asp',
+      description: 'Before man travels to Mars, NASA hopes to design new engines that will let us fly through the Solar System more quickly.  The proposed VASIMR engine would do that.',
+      pubdate: 'Tue, 27 May 2003 08:37:32 GMT',
+      guid: 'http://liftoff.msfc.nasa.gov/2003/05/27.html#item571'    },
+    {
+      title: 'Astronauts\' Dirty Laundry',
+      link: 'http://liftoff.msfc.nasa.gov/news/2003/news-laundry.asp',
+      description: 'Compared to earlier spacecraft, the International Space Station has many luxuries, but laundry facilities are not one of them.  Instead, astronauts have other options.',
+      pubdate: 'Tue, 20 May 2003 08:56:02 GMT',
+      guid: 'http://liftoff.msfc.nasa.gov/2003/05/20.html#item570'    }
+  ]
+};
+
+
 exports['Read an RSS 2.0 file'] = function(beforeExit, assert) {
-  var parser = new FeedMe(),
-    feed = {},
-    events = 0;
+  var parser = new FeedMe()
+    , events = 0
+    , item = 0;
   
   parser.on('title', function(data) {
-    assert.equal(data, 'Liftoff News');
-    feed.title = data;
+    assert.equal(data, feed.title);
     events++;
   });
 
   parser.on('link', function(data) {
-    assert.equal(data, 'http://liftoff.msfc.nasa.gov/');
-    feed.link = data;
+    assert.equal(data, feed.link);
     events++;
   });
 
   parser.on('description', function(data) {
-    assert.equal(data, 'Liftoff to Space Exploration.');
-    feed.description = data;
+    assert.equal(data, feed.description);
     events++;
   });
 
   parser.on('language', function(data) {
-    assert.equal(data, 'en-us');
-    feed.language = data;
+    assert.equal(data, feed.language);
     events++;
   });
 
   parser.on('pubdate', function(data) {
-    assert.equal(data, 'Tue, 10 Jun 2003 04:00:00 GMT');
-    feed.pubdate = data;
+    assert.equal(data, feed.pubdate);
     events++;
   });
 
   parser.on('lastbuilddate', function(data) {
-    assert.equal(data, 'Tue, 10 Jun 2003 09:41:01 GMT');
-    feed.lastbuilddate = data;
+    assert.equal(data, feed.lastbuilddate);
     events++;
   });
 
   parser.on('docs', function(data) {
-    assert.equal(data, 'http://blogs.law.harvard.edu/tech/rss');
-    feed.docs = data;
+    assert.equal(data, feed.docs);
     events++;
   });
 
   parser.on('generator', function(data) {
-    assert.equal(data, 'Weblog Editor 2.0');
-    feed.generator = data;
+    assert.equal(data, feed.generator);
     events++;
   });
 
   parser.on('managingeditor', function(data) {
-    assert.equal(data, 'editor@example.com');
-    feed.managingEditor = data;
+    assert.equal(data, feed.managingeditor);
     events++;
   });
 
   parser.on('webmaster', function(data) {
-    assert.equal(data, 'webmaster@example.com');
-    feed.webmaster = data;
+    assert.equal(data, feed.webmaster);
+    events++;
+  });
+
+  parser.on('item', function(data) {
+    assert.equal(data.title, feed.items[item].title);
+    assert.equal(data.link, feed.items[item].link);
+    assert.equal(data.description, feed.items[item].description);
+    assert.equal(data.pubdate, feed.items[item].pubdate);
+    assert.equal(data.guid, feed.items[item].guid);
+    assert.deepEqual(data, feed.items[item]);
+    item++
     events++;
   });
 
   parser.write(fs.readFileSync(__dirname + '/rss2.xml', 'utf8'));
 
   beforeExit(function() {
-    assert.equal(events, 10);
-    assert.length(parser.done().items, 4);
+    assert.equal(events, 14);
+    assert.deepEqual(parser.done(), feed);
   });
 };
