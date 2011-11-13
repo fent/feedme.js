@@ -2,7 +2,7 @@
   "name": "feedme",
   "description": "RSS/Atom feed parser",
   "keywords": ["feed", "rss", "atom", "parser"],
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "type": "git",
     "url": "git://github.com/fent/feedme.js.git"
@@ -13,8 +13,7 @@
     "node": "*"
   },
   "dependencies": {
-    "sax": ">=0.1.11",
-    "underscore": ">=1.1.7"
+    "sax": ">=0.1.11"
   },
   "devDependencies": {
     "expresso": ">=0.9.0"

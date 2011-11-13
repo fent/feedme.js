@@ -1,5 +1,4 @@
 sax = require 'sax'
-_   = require 'underscore'
 
 
 isEmpty = (obj) ->
