@@ -1,16 +1,14 @@
-Install
-------------
-
-    npm install feedme
+feedme.js is an RSS/Atom feed parser. How is this different from the other few feed parsers? It uses [sax-js](https://github.com/isaacs/sax-js) for xml parsing, that means it is coded in pure Javascript and thus more deployable. I needed a parser that wouldn't require me to install external dependencies or to compile anything, so I created one with sax-js.
 
 
 Usage
 ------------------
 
 ```javascript
-var FeedMe = require('feed');
-
-var parser = new FeedMe();
+var FeedMe = require('feed')
+  , parser = new FeedMe()
+  , fs = require('fs')
+  ;
 
 parser.on('title', function(titel) {
   console.log('title of feed is', title);
@@ -20,10 +18,10 @@ parser.on('item', function(item) {
   console.log(item);
 });
 
-parser.write(fs.readFileSync('rssfeed.xml', 'utf8'));
+// sax-js allows streaming
+// which means faster parsing for larger feeds!
+fs.createReadStream('rssfeed.xml').pipe(parser);
 ```
-
-feedme.js is an RSS/Atom feed parser. How is this different from the other few feed parsers? It uses [sax-js](https://github.com/isaacs/sax-js) for xml parsing, that means it is coded in pure Javascript and thus more deployable. I needed a parser that wouldn't require me to install external dependencies or to compile anything, so I created one with sax-js.
 
 
 API
@@ -94,3 +92,20 @@ parser.on('description', function(d) {
 
 ###Event: 'error'
 From the sax-js parser. Emitted when there is an error parsing the document.
+
+
+Install
+------------
+
+```bash
+npm install feedme
+```
+
+
+Tests
+------
+Tests are written with [expresso](http://visionmedia.github.com/expresso/)
+
+```bash
+npm test
+```

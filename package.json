@@ -9,6 +9,9 @@
   },
   "author": "fent (https://github.com/fent)",
   "main": "./lib/feedme.js",
+  "scripts": {
+    "test": "expresso"
+  },
   "engines": {
     "node": "*"
   },
