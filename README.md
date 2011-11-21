@@ -1,8 +1,8 @@
+# FeedMe.js [![Build Status](https://secure.travis-ci.org/fent/feedme.js.png)](http://travis-ci.org/fent/feedme.js)
 feedme.js is an RSS/Atom feed parser. How is this different from the other few feed parsers? It uses [sax-js](https://github.com/isaacs/sax-js) for xml parsing, that means it is coded in pure Javascript and thus more deployable. I needed a parser that wouldn't require me to install external dependencies or to compile anything, so I created one with sax-js.
 
 
-Usage
-------------------
+# Usage
 
 ```javascript
 var FeedMe = require('feed')
@@ -24,8 +24,7 @@ fs.createReadStream('rssfeed.xml').pipe(parser);
 ```
 
 
-API
----
+#API
 ###new Feed()
 Creates a new instance of the FeedMe parser.
 
@@ -94,18 +93,20 @@ parser.on('description', function(d) {
 From the sax-js parser. Emitted when there is an error parsing the document.
 
 
-Install
-------------
+#Install
 
 ```bash
 npm install feedme
 ```
 
 
-Tests
-------
+#Tests
 Tests are written with [expresso](http://visionmedia.github.com/expresso/)
 
 ```bash
 npm test
 ```
+
+
+#License
+MIT
