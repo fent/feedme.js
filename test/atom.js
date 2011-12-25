@@ -1,5 +1,6 @@
-var FeedMe = require('../lib/feedme'),
-      fs = require('fs');
+var FeedMe = require('../lib/feedme')
+  ,     fs = require('fs')
+  , assert = require('assert')
 
 
 var feed = {
@@ -78,67 +79,73 @@ var feed = {
     }
   ]
 };
-exports['Parse an Atom file'] = function(beforeExit, assert) {
+
+
+describe('Parse an Atom file', function() {
   var parser = new FeedMe()
     , events = 0
-    , item = 0;
 
-  parser.on('title', function(data) {
-    assert.deepEqual(data, feed.title);
-    events++;
-  });
+  it('Events emitted match expected', function(done) {
 
-  parser.on('subtitle', function(data) {
-    assert.deepEqual(data, feed.subtitle);
-    events++;
-  });
-
-  parser.on('updated', function(data) {
-    assert.equal(data, feed.updated);
-    events++;
-  });
-
-  parser.on('id', function(data) {
-    assert.equal(data, feed.id);
-    events++;
-  });
-
-  parser.once('link', function(data) {
-    assert.deepEqual(data, feed.link[0]);
-    events++;
-
-    parser.once('link', function(data) {
-      assert.deepEqual(data, feed.link[1]);
+    parser.on('title', function(data) {
+      assert.deepEqual(data, feed.title);
       events++;
     });
+
+    parser.on('subtitle', function(data) {
+      assert.deepEqual(data, feed.subtitle);
+      events++;
+    });
+
+    parser.on('updated', function(data) {
+      assert.equal(data, feed.updated);
+      events++;
+    });
+
+    parser.on('id', function(data) {
+      assert.equal(data, feed.id);
+      events++;
+    });
+
+    parser.once('link', function(data) {
+      assert.deepEqual(data, feed.link[0]);
+      events++;
+
+      parser.once('link', function(data) {
+        assert.deepEqual(data, feed.link[1]);
+        events++;
+      });
+    });
+
+    parser.on('rights', function(data) {
+      assert.equal(data, feed.rights);
+      events++;
+    });
+
+    parser.on('generator', function(data) {
+      assert.deepEqual(data, feed.generator);
+      events++;
+    });
+
+    parser.on('item', function(data) {
+      assert.deepEqual(data.title, feed.items[0].title);
+      assert.deepEqual(data.link, feed.items[0].link);
+      assert.deepEqual(data.id, feed.items[0].id);
+      assert.deepEqual(data.updated, feed.items[0].updated);
+      assert.deepEqual(data.author, feed.items[0].author);
+      assert.deepEqual(data.contributor, feed.items[0].contributor);
+      assert.deepEqual(data.content, feed.items[0].content);
+      assert.deepEqual(data, feed.items[0]);
+      events++;
+    });
+
+    fs.createReadStream(__dirname + '/atom.xml').pipe(parser);
+
+    parser.on('end', done);
   });
 
-  parser.on('rights', function(data) {
-    assert.equal(data, feed.rights);
-    events++;
-  });
-
-  parser.on('generator', function(data) {
-    assert.deepEqual(data, feed.generator);
-    events++;
-  });
-
-  parser.on('item', function(data) {
-    assert.deepEqual(data.title, feed.items[0].title);
-    assert.deepEqual(data.link, feed.items[0].link);
-    assert.deepEqual(data.id, feed.items[0].id);
-    assert.deepEqual(data.updated, feed.items[0].updated);
-    assert.deepEqual(data.author, feed.items[0].author);
-    assert.deepEqual(data.contributor, feed.items[0].contributor);
-    assert.deepEqual(data.content, feed.items[0].content);
-    assert.deepEqual(data, feed.items[0]);
-    events++;
-  });
-
-  fs.createReadStream(__dirname + '/atom.xml').pipe(parser);
-
-  beforeExit(function() {
+  after(function() {
     assert.equal(events, 9);
     assert.deepEqual(parser.done(), feed);
   });
-};
+});
