@@ -1,5 +1,6 @@
-var FeedMe = require('../lib/feedme'),
-      fs = require('fs');
+var FeedMe = require('../lib/feedme')
+  ,     fs = require('fs')
+  , assert = require('assert')
 
 
 var feed = {
@@ -41,76 +42,79 @@ var feed = {
 };
 
 
-exports['Read an RSS 2.0 file'] = function(beforeExit, assert) {
+describe('Parse an RSS 2.0 file', function() {
   var parser = new FeedMe()
     , events = 0
-    , item = 0;
+    , item = 0
   
-  parser.on('title', function(data) {
-    assert.equal(data, feed.title);
-    events++;
+  it('Matches JSON object', function(done) {
+    parser.on('title', function(data) {
+      assert.equal(data, feed.title);
+      events++;
+    });
+
+    parser.on('link', function(data) {
+      assert.equal(data, feed.link);
+      events++;
+    });
+
+    parser.on('description', function(data) {
+      assert.equal(data, feed.description);
+      events++;
+    });
+
+    parser.on('language', function(data) {
+      assert.equal(data, feed.language);
+      events++;
+    });
+
+    parser.on('pubdate', function(data) {
+      assert.equal(data, feed.pubdate);
+      events++;
+    });
+
+    parser.on('lastbuilddate', function(data) {
+      assert.equal(data, feed.lastbuilddate);
+      events++;
+    });
+
+    parser.on('docs', function(data) {
+      assert.equal(data, feed.docs);
+      events++;
+    });
+
+    parser.on('generator', function(data) {
+      assert.equal(data, feed.generator);
+      events++;
+    });
+
+    parser.on('managingeditor', function(data) {
+      assert.equal(data, feed.managingeditor);
+      events++;
+    });
+
+    parser.on('webmaster', function(data) {
+      assert.equal(data, feed.webmaster);
+      events++;
+    });
+
+    parser.on('item', function(data) {
+      assert.equal(data.title, feed.items[item].title);
+      assert.equal(data.link, feed.items[item].link);
+      assert.equal(data.description, feed.items[item].description);
+      assert.equal(data.pubdate, feed.items[item].pubdate);
+      assert.equal(data.guid, feed.items[item].guid);
+      assert.deepEqual(data, feed.items[item]);
+      item++
+      events++;
+    });
+
+    parser.write(fs.readFileSync(__dirname + '/rss2.xml', 'utf8'));
+    done();
   });
 
-  parser.on('link', function(data) {
-    assert.equal(data, feed.link);
-    events++;
-  });
-
-  parser.on('description', function(data) {
-    assert.equal(data, feed.description);
-    events++;
-  });
-
-  parser.on('language', function(data) {
-    assert.equal(data, feed.language);
-    events++;
-  });
-
-  parser.on('pubdate', function(data) {
-    assert.equal(data, feed.pubdate);
-    events++;
-  });
-
-  parser.on('lastbuilddate', function(data) {
-    assert.equal(data, feed.lastbuilddate);
-    events++;
-  });
-
-  parser.on('docs', function(data) {
-    assert.equal(data, feed.docs);
-    events++;
-  });
-
-  parser.on('generator', function(data) {
-    assert.equal(data, feed.generator);
-    events++;
-  });
-
-  parser.on('managingeditor', function(data) {
-    assert.equal(data, feed.managingeditor);
-    events++;
-  });
-
-  parser.on('webmaster', function(data) {
-    assert.equal(data, feed.webmaster);
-    events++;
-  });
-
-  parser.on('item', function(data) {
-    assert.equal(data.title, feed.items[item].title);
-    assert.equal(data.link, feed.items[item].link);
-    assert.equal(data.description, feed.items[item].description);
-    assert.equal(data.pubdate, feed.items[item].pubdate);
-    assert.equal(data.guid, feed.items[item].guid);
-    assert.deepEqual(data, feed.items[item]);
-    item++
-    events++;
-  });
-
-  parser.write(fs.readFileSync(__dirname + '/rss2.xml', 'utf8'));
-
-  beforeExit(function() {
+  after(function() {
     assert.equal(events, 14);
     assert.deepEqual(parser.done(), feed);
   });
-};
+});
