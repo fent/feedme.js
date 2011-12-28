@@ -81,53 +81,53 @@ var feed = {
 };
 
 
-describe('Parse an Atom file', function() {
+describe('Parse an Atom file', function () {
   var parser = new FeedMe()
     , events = 0
 
-  it('Events emitted match expected', function(done) {
+  it('Events emitted match expected', function (done) {
 
-    parser.on('title', function(data) {
+    parser.on('title', function (data) {
       assert.deepEqual(data, feed.title);
       events++;
     });
 
-    parser.on('subtitle', function(data) {
+    parser.on('subtitle', function (data) {
       assert.deepEqual(data, feed.subtitle);
       events++;
     });
 
-    parser.on('updated', function(data) {
+    parser.on('updated', function (data) {
       assert.equal(data, feed.updated);
       events++;
     });
 
-    parser.on('id', function(data) {
+    parser.on('id', function (data) {
       assert.equal(data, feed.id);
       events++;
     });
 
-    parser.once('link', function(data) {
+    parser.once('link', function (data) {
       assert.deepEqual(data, feed.link[0]);
       events++;
 
-      parser.once('link', function(data) {
+      parser.once('link', function (data) {
         assert.deepEqual(data, feed.link[1]);
         events++;
       });
     });
 
-    parser.on('rights', function(data) {
+    parser.on('rights', function (data) {
       assert.equal(data, feed.rights);
       events++;
     });
 
-    parser.on('generator', function(data) {
+    parser.on('generator', function (data) {
       assert.deepEqual(data, feed.generator);
       events++;
     });
 
-    parser.on('item', function(data) {
+    parser.on('item', function (data) {
       assert.deepEqual(data.title, feed.items[0].title);
       assert.deepEqual(data.link, feed.items[0].link);
       assert.deepEqual(data.id, feed.items[0].id);
@@ -144,7 +144,7 @@ describe('Parse an Atom file', function() {
     parser.on('end', done);
   });
 
-  after(function() {
+  after(function () {
     assert.equal(events, 9);
     assert.deepEqual(parser.done(), feed);
   });
