@@ -16,7 +16,8 @@
     "node": "*"
   },
   "dependencies": {
-    "sax": ">=0.1.11"
+    "eventyoshi": "0.1.x"
+    "sax": "0.1.x"
   },
   "devDependencies": {
     "mocha": "0.7.x"
