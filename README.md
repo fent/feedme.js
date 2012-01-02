@@ -76,11 +76,11 @@ Signal to the parser that writing is done. It returns the feed as a Javascript o
 ```
 
 
-###Event: 'item'
+### Event: 'item'
 `function (item) { }`
 Emitted whenever the parser finds a new feed item. An item can be inside an `<item>` or <entry>` tag.
 
-###Event: `tagname`
+### Event: `tagname`
 `function (value) { }`
 Emitted whenever a tag on the root of the document is finished parsing. The root being the `<channel>` or `<feed>` tag. Example:
 
@@ -90,18 +90,23 @@ parser.on('description', function(d) {
 });
 ```
 
-###Event: 'error'
+### Event: 'type'
+`function (type) { }`
+Type of feed. Example: atom, rss 2.0, json.
+
+### Event: 'error'
+`function (err) { }`
 Emitted when there is an error parsing the document.
 
 
-#Install
+# Install
 
 ```bash
 npm install feedme
 ```
 
 
-#Tests
+# Tests
 Tests are written with [mocha](http://visionmedia.github.com/mocha/)
 
 ```bash
@@ -109,5 +114,5 @@ npm test
 ```
 
 
-#License
+# License
 MIT
