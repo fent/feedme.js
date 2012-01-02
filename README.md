@@ -1,5 +1,5 @@
 # FeedMe.js [![Build Status](https://secure.travis-ci.org/fent/feedme.js.png)](http://travis-ci.org/fent/feedme.js)
-feedme.js is an RSS/Atom feed parser. How is this different from the other few feed parsers? It uses [sax-js](https://github.com/isaacs/sax-js) for xml parsing, that means it is coded in pure Javascript and thus more deployable. I needed a parser that wouldn't require me to install external dependencies or to compile anything, so I created one with sax-js.
+feedme.js is an RSS/Atom/JSON feed parser. How is this different from the other few feed parsers? It uses [sax-js](https://github.com/isaacs/sax-js) for xml parsing and [clarinet](https://github.com/dscape/clarinet) for json parsing. That means it is coded in pure Javascript and thus more deployable. I needed a parser that wouldn't require me to install external dependencies or to compile anything.
 
 
 # Usage
@@ -8,7 +8,6 @@ feedme.js is an RSS/Atom feed parser. How is this different from the other few f
 var FeedMe = require('feed')
   , parser = new FeedMe()
   , fs = require('fs')
-  ;
 
 parser.on('title', function(titel) {
   console.log('title of feed is', title);
@@ -18,24 +17,26 @@ parser.on('item', function(item) {
   console.log(item);
 });
 
-// sax-js allows streaming
+// sax-js and clarinet allow streaming
 // which means faster parsing for larger feeds!
 fs.createReadStream('rssfeed.xml').pipe(parser);
 ```
 
 
-#API
-###new Feed()
+# API
+
+### new Feed()
 Creates a new instance of the FeedMe parser.
 
-###parser.write(xml)
+### parser.write(xml)
 Write to the parser.
 
-###parser.done()
+### parser.done()
 Signal to the parser that writing is done. It returns the feed as a Javascript object. Subelements are put as children objects with their names as keys. When one object has more than one child of the same name, they are put into an array. Items are always put into an array. Example from the `rss2.xml` test:
 
 ```javascript
 {
+  type: 'rss 2.0',
   title: 'Liftoff News',
   link: 'http://liftoff.msfc.nasa.gov/',
   description: 'Liftoff to Space Exploration.',
@@ -90,7 +91,7 @@ parser.on('description', function(d) {
 ```
 
 ###Event: 'error'
-From the sax-js parser. Emitted when there is an error parsing the document.
+Emitted when there is an error parsing the document.
 
 
 #Install
