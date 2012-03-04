@@ -4,6 +4,7 @@ var FeedMe = require('..')
   , assert = require('assert')
 
 
+var file = path.join(__dirname, 'jsonfeed.json');
 var feed = {
   "type": "json",
   "xmlns" : "http://www.w3.org/2005/Atom",
@@ -132,7 +133,7 @@ describe('Parse a JSON feed file', function() {
       item++;
     });
 
-    fs.createReadStream(path.join(__dirname, 'jsonfeed.json')).pipe(parser);
+    fs.createReadStream(file).pipe(parser);
 
     parser.on('error', function(err) {
       throw err;
@@ -144,6 +145,20 @@ describe('Parse a JSON feed file', function() {
   after(function() {
     assert.equal(events, 9);
     assert.equal(item, 1);
-    assert.deepEqual(parser.done(), feed);
+    assert.deepEqual(parser.done(), undefined);
   });
+
+  describe('with buffer on', function() {
+    var parser = new FeedMe(true);
+
+    it('Returns matching Javascript object', function(done) {
+      fs.createReadStream(file).pipe(parser);
+
+      parser.on('end', function() {
+        assert.deepEqual(parser.done(), feed);
+        done();
+      });
+    });
+  });
+
 });

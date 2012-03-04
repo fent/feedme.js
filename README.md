@@ -25,14 +25,14 @@ fs.createReadStream('rssfeed.xml').pipe(parser);
 
 # API
 
-### new Feed()
-Creates a new instance of the FeedMe parser.
+### new FeedMe([buffer])
+Creates a new instance of the FeedMe parser. `buffer` can be `true` if you want the parser to buffer the entire feed document as a JSON object, letting you use the `FeedMe#done()` method.
 
 ### parser.write(xml)
 Write to the parser.
 
 ### parser.done()
-Signal to the parser that writing is done. It returns the feed as a Javascript object. Subelements are put as children objects with their names as keys. When one object has more than one child of the same name, they are put into an array. Items are always put into an array. Example from the `rss2.xml` test:
+Can only be used if `buffer` is `true`. It returns the feed as a Javascript object. Subelements are put as children objects with their names as keys. When one object has more than one child of the same name, they are put into an array. Items are always put into an array. Example from the `rss2.xml` test:
 
 ```javascript
 {

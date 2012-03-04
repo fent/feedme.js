@@ -4,6 +4,7 @@ var FeedMe = require('..')
   , assert = require('assert')
 
 
+var file = path.join(__dirname, 'rss2.xml');
 var feed = {
   type: 'rss 2.0',
   title: 'Liftoff News',
@@ -117,12 +118,26 @@ describe('Parse an RSS 2.0 file', function() {
       events++;
     });
 
-    parser.write(fs.readFileSync(path.join(__dirname, 'rss2.xml'), 'utf8'));
+    parser.write(fs.readFileSync(file, 'utf8'));
     done();
   });
 
   after(function() {
     assert.equal(events, 15);
-    assert.deepEqual(parser.done(), feed);
+    assert.deepEqual(parser.done(), undefined);
   });
+
+  describe('with buffer on', function() {
+    var parser = new FeedMe(true);
+
+    it('Returns matching Javascript object', function(done) {
+      fs.createReadStream(file).pipe(parser);
+
+      parser.on('end', function() {
+        assert.deepEqual(parser.done(), feed);
+        done();
+      });
+    });
+  });
+
 });
