@@ -1,5 +1,6 @@
 var FeedMe = require('..')
-  ,     fs = require('fs')
+  , fs     = require('fs')
+  , path   = require('path')
   , assert = require('assert')
 
 
@@ -116,7 +117,7 @@ describe('Parse an RSS 2.0 file', function() {
       events++;
     });
 
-    parser.write(fs.readFileSync(__dirname + '/rss2.xml', 'utf8'));
+    parser.write(fs.readFileSync(path.join(__dirname, 'rss2.xml'), 'utf8'));
     done();
   });
 

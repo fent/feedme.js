@@ -1,5 +1,6 @@
 var FeedMe = require('..')
-  ,     fs = require('fs')
+  , fs     = require('fs')
+  , path   = require('path')
   , assert = require('assert')
 
 
@@ -139,7 +140,7 @@ describe('Parse an Atom file', function() {
       events++;
     });
 
-    fs.createReadStream(__dirname + '/atom.xml').pipe(parser);
+    fs.createReadStream(path.join(__dirname, 'atom.xml')).pipe(parser);
 
     parser.on('end', done);
   });
