@@ -4,6 +4,7 @@ var FeedMe = require('..')
   , assert = require('assert')
 
 
+var file = path.join(__dirname, 'atom.xml');
 var feed = {
   type: 'atom',
   title: 'dive into mark',
@@ -140,13 +141,27 @@ describe('Parse an Atom file', function() {
       events++;
     });
 
-    fs.createReadStream(path.join(__dirname, 'atom.xml')).pipe(parser);
+    fs.createReadStream(file).pipe(parser);
 
     parser.on('end', done);
   });
 
   after(function() {
     assert.equal(events, 10);
-    assert.deepEqual(parser.done(), feed);
+    assert.deepEqual(parser.done(), undefined);
   });
+
+  describe('with buffer on', function() {
+    var parser = new FeedMe(true);
+
+    it('Returns matching Javascript object', function(done) {
+      fs.createReadStream(file).pipe(parser);
+
+      parser.on('end', function() {
+        assert.deepEqual(parser.done(), feed);
+        done();
+      });
+    });
+  });
+
 });
