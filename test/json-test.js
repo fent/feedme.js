@@ -1,5 +1,6 @@
 var FeedMe = require('..')
-  ,     fs = require('fs')
+  , fs     = require('fs')
+  , path   = require('path')
   , assert = require('assert')
 
 
@@ -131,7 +132,7 @@ describe('Parse a JSON feed file', function() {
       item++;
     });
 
-    fs.createReadStream(__dirname + '/jsonfeed.json').pipe(parser);
+    fs.createReadStream(path.join(__dirname, 'jsonfeed.json')).pipe(parser);
 
     parser.on('error', function(err) {
       throw err;
