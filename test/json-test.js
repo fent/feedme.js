@@ -134,11 +134,6 @@ describe('Parse a JSON feed file', function() {
     });
 
     fs.createReadStream(file).pipe(parser);
-
-    parser.on('error', function(err) {
-      throw err;
-    });
-
     parser.on('end', done);
   });
 
