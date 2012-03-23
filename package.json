@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "eventyoshi": "0.1.x",
-    "sax": "0.2.x",
+    "sax": "0.3.x",
     "clarinet": "0.5.x"
   },
   "devDependencies": {
