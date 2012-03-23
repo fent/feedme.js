@@ -4,7 +4,7 @@ var FeedMe = require('..')
   , assert = require('assert')
 
 
-var file = path.join(__dirname, 'atom.xml');
+var file = path.join(__dirname, 'assets', 'atom.xml');
 var feed = {
   type: 'atom',
   title: 'dive into mark',

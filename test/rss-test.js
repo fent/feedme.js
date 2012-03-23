@@ -4,7 +4,7 @@ var FeedMe = require('..')
   , assert = require('assert')
 
 
-var file = path.join(__dirname, 'rss2.xml');
+var file = path.join(__dirname, 'assets', 'rss2.xml');
 var feed = {
   type: 'rss 2.0',
   title: 'Liftoff News',

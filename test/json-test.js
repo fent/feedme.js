@@ -4,7 +4,7 @@ var FeedMe = require('..')
   , assert = require('assert')
 
 
-var file = path.join(__dirname, 'jsonfeed.json');
+var file = path.join(__dirname, 'assets', 'jsonfeed.json');
 var feed = {
   "type": "json",
   "xmlns" : "http://www.w3.org/2005/Atom",
