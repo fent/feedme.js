@@ -9,7 +9,7 @@ var FeedMe = require('feed')
   , parser = new FeedMe()
   , fs = require('fs')
 
-parser.on('title', function(titel) {
+parser.on('title', function(title) {
   console.log('title of feed is', title);
 });
 
