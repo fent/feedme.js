@@ -21,7 +21,7 @@
     "clarinet": "0.5.x"
   },
   "devDependencies": {
-    "mocha": "0.7.x"
+    "mocha": "0.x.x"
   },
   "licenses": [ {
     "type": "MIT",
