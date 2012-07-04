@@ -15,9 +15,6 @@
   "scripts": {
     "test": "mocha -R spec test/*-test.js"
   },
-  "engines": {
-    "node": "*"
-  },
   "dependencies": {
     "eventyoshi": "0.1.x",
     "sax": "0.3.x",
