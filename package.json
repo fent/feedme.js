@@ -16,9 +16,9 @@
     "test": "mocha -R spec test/*-test.js"
   },
   "dependencies": {
-    "eventyoshi": "0.1.x",
-    "sax": "0.3.x",
-    "clarinet": "0.5.x"
+    "eventyoshi": "~0.1.4",
+    "sax": "~0.4.1",
+    "clarinet": "~0.6.0"
   },
   "devDependencies": {
     "mocha": "x"
