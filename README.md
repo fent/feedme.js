@@ -77,11 +77,13 @@ Can only be used if `buffer` is `true`. It returns the feed as a Javascript obje
 
 
 ### Event: 'item'
-`function (item) { }`
+* `Object` - Item from the feed.
+
 Emitted whenever the parser finds a new feed item. An item can be inside an `<item>` or <entry>` tag.
 
 ### Event: `tagname`
-`function (value) { }`
+* `Object` - The object containing the value of the tag found.
+
 Emitted whenever a tag on the root of the document is finished parsing. The root being the `<channel>` or `<feed>` tag. Example:
 
 ```javascript
@@ -91,11 +93,11 @@ parser.on('description', function(d) {
 ```
 
 ### Event: 'type'
-`function (type) { }`
-Type of feed. Example: atom, rss 2.0, json.
+* `string` - Type of feed. Example: atom, rss 2.0, json.
 
 ### Event: 'error'
-`function (err) { }`
+* `Error`
+
 Emitted when there is an error parsing the document.
 
 
