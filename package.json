@@ -18,7 +18,7 @@
   "dependencies": {
     "clarinet": "^0.8.1",
     "eventyoshi": "^0.1.4",
-    "sax": "^0.6.1"
+    "sax": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "x"
