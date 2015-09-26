@@ -1,8 +1,14 @@
 {
   "name": "feedme",
   "description": "RSS/Atom/JSON feed parser",
-  "keywords": ["feed", "rss", "atom", "json", "parser"],
-  "version": "v0.2.7",
+  "keywords": [
+    "feed",
+    "rss",
+    "atom",
+    "json",
+    "parser"
+  ],
+  "version": "0.3.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/fent/feedme.js.git"
@@ -23,8 +29,10 @@
   "devDependencies": {
     "mocha": "x"
   },
-  "licenses": [ {
-    "type": "MIT",
-    "url" : "http://github.com/fent/feedme.js/raw/master/LICENSE"
-  }]
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/fent/feedme.js/raw/master/LICENSE"
+    }
+  ]
 }
