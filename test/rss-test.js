@@ -38,7 +38,7 @@ var feed = {
     {
       title: 'Astronauts\' Dirty Laundry',
       link: 'http://liftoff.msfc.nasa.gov/news/2003/news-laundry.asp',
-      description: 'Compared to earlier spacecraft, the International Space Station has many luxuries, but laundry facilities are not one of them.  Instead, astronauts have other options.',
+      description: '',
       pubdate: 'Tue, 20 May 2003 08:56:02 GMT',
       guid: 'http://liftoff.msfc.nasa.gov/2003/05/20.html#item570'    }
   ]
