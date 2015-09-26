@@ -1,7 +1,7 @@
-var FeedMe = require('..')
-  , fs     = require('fs')
-  , path   = require('path')
-  , assert = require('assert')
+var FeedMe = require('..');
+var fs     = require('fs');
+var path   = require('path');
+var assert = require('assert');
 
 
 var file = path.join(__dirname, 'assets', 'atom.xml');
@@ -79,8 +79,8 @@ var feed = {
 
 
 describe('Parse an Atom file', function() {
-  var parser = new FeedMe()
-    , events = 0
+  var parser = new FeedMe();
+  var events = 0;
 
   it('Events emitted match expected', function(done) {
 

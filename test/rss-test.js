@@ -1,9 +1,10 @@
-var FeedMe = require('..')
-  , fs     = require('fs')
-  , path   = require('path')
-  , assert = require('assert')
+var FeedMe = require('..');
+var fs     = require('fs');
+var path   = require('path');
+var assert = require('assert');
 
 
+/* jshint maxlen: false */
 var file = path.join(__dirname, 'assets', 'rss2.xml');
 var feed = {
   type: 'rss 2.0',
@@ -46,9 +47,9 @@ var feed = {
 
 
 describe('Parse an RSS 2.0 file', function() {
-  var parser = new FeedMe()
-    , events = 0
-    , item = 0
+  var parser = new FeedMe();
+  var events = 0;
+  var item = 0;
   
   it('Matches JSON object', function(done) {
 
@@ -114,7 +115,7 @@ describe('Parse an RSS 2.0 file', function() {
       assert.equal(data.pubdate, feed.items[item].pubdate);
       assert.equal(data.guid, feed.items[item].guid);
       assert.deepEqual(data, feed.items[item]);
-      item++
+      item++;
       events++;
     });
 
