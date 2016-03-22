@@ -8,7 +8,7 @@ feedme.js is an RSS/Atom/JSON feed parser. How is this different from the other 
 # Usage
 
 ```javascript
-var FeedMe = require('feed')
+var FeedMe = require('feedme')
   , parser = new FeedMe()
   , fs = require('fs')
 
