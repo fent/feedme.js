@@ -56,10 +56,12 @@ var feed = {
       },
       contributor: [
         {
-          name: 'Sam Ruby'
+          name: 'Sam Ruby',
+          desc: '\n        Bad\n       indents\n      '
         },
         {
-          name: 'Joe Gregorio'
+          name: 'Joe Gregorio',
+          desc: 'A bad\n        indent\n      '
         },
       ],
       content: {

@@ -31,9 +31,16 @@
     </author>
     <contributor>
       <name>Sam Ruby</name>
+      <desc>
+        Bad
+       indents
+      </desc>
     </contributor>
     <contributor>
       <name>Joe Gregorio</name>
+      <desc>A bad
+        indent
+      </desc>
     </contributor>
     <content type="xhtml" xml:lang="en" 
      xml:base="http://diveintomark.org/">
