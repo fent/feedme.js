@@ -40,6 +40,7 @@ var feed = {
   },
   'openSearch$totalResults' : '74',
   'openSearch$startIndex' : '1',
+  'list': [1, 2, [3]],
   'items' : [ {
     'id' : 'tag:blogger.com,1999:blog-934829683866516411.post-8097606299472435819', 
     'published' : '2007-03-18T12:27:00.000+01:00',
