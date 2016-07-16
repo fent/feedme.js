@@ -27,7 +27,8 @@
     "sax": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "x"
+    "istanbul": "*",
+    "mocha": "*"
   },
   "licenses": [
     {
