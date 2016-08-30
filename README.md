@@ -11,21 +11,21 @@ feedme.js is an RSS/Atom/JSON feed parser. How is this different from the other 
 # Usage
 
 ```javascript
-var FeedMe = require('feedme')
-  , parser = new FeedMe()
-  , fs = require('fs')
+var FeedMe = require('feedme');
+var http = require('http');
 
-parser.on('title', function(title) {
-  console.log('title of feed is', title);
+http.get('http://www.npr.org/rss/rss.php?id=1001', function(res) {
+  var parser = new FeedMe();
+  parser.on('title', function(title) {
+    console.log('title of feed is', title);
+  });
+  parser.on('item', function(item) {
+    console.log();
+    console.log('news:', item.title);
+    console.log(item.description);
+  });
+  res.pipe(parser);
 });
-
-parser.on('item', function(item) {
-  console.log(item);
-});
-
-// sax-js and clarinet allow streaming
-// which means faster parsing for larger feeds!
-fs.createReadStream('rssfeed.xml').pipe(parser);
 ```
 
 
