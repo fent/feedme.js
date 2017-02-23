@@ -38,7 +38,22 @@ Creates a new instance of the FeedMe parser. `buffer` can be `true` if you want 
 Write to the parser.
 
 ### parser.done()
-Can only be used if `buffer` is `true`. It returns the feed as a Javascript object. Subelements are put as children objects with their names as keys. When one object has more than one child of the same name, they are put into an array. Items are always put into an array. Example from the `rss2.xml` test:
+Can only be used if `buffer` is `true`. It returns the feed as a Javascript object, should be called after `end` is emitted from the parser. Subelements are put as children objects with their names as keys. When one object has more than one child of the same name, they are put into an array. Items are always put into an array.
+
+```javascript
+var FeedMe = require('feedme');
+var http = require('http');
+
+http.get('https://nodejs.org/en/feed/blog.xml', function(res) {
+  var parser = new FeedMe(true);
+  res.pipe(parser);
+  parser.on('end', function() {
+    console.log(parser.done());
+  });
+});
+```
+
+An example of what `parser.done()` could return.
 
 ```javascript
 {
