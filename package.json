@@ -30,5 +30,8 @@
     "istanbul": "*",
     "mocha": "*"
   },
+  "engines": {
+    "node": ">=0.12"
+  },
   "license": "MIT"
 }
