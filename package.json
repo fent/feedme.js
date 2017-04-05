@@ -18,6 +18,9 @@
     "Lucas Stadler"
   ],
   "main": "./lib/feedme.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "test": "istanbul cover node_modules/.bin/_mocha -- test/*-test.js"
   },
