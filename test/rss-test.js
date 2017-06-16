@@ -52,7 +52,6 @@ describe('Parse an RSS 2.0 file', function() {
   var item = 0;
   
   it('Matches JSON object', function(done) {
-
     parser.on('type', function(data) {
       assert.deepEqual(data, feed1.type);
       events++;
@@ -119,13 +118,12 @@ describe('Parse an RSS 2.0 file', function() {
       events++;
     });
 
-    parser.write(fs.readFileSync(file1, 'utf8'));
-    done();
-  });
-
-  after(function() {
-    assert.equal(events, 15);
-    assert.deepEqual(parser.done(), undefined);
+    fs.createReadStream(file1).pipe(parser);
+    parser.on('end', function() {
+      assert.equal(events, 15);
+      assert.deepEqual(parser.done(), undefined);
+      done();
+    });
   });
 
   describe('with buffer on', function() {
@@ -140,5 +138,4 @@ describe('Parse an RSS 2.0 file', function() {
       });
     });
   });
-
 });
