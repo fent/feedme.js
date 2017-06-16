@@ -5,8 +5,8 @@ var assert = require('assert');
 
 
 /* jshint maxlen: false */
-var file = path.join(__dirname, 'assets', 'rss2.xml');
-var feed = {
+var file1 = path.join(__dirname, 'assets', 'rss2.xml');
+var feed1 = {
   type: 'rss 2.0',
   title: 'Liftoff News',
   link: 'http://liftoff.msfc.nasa.gov/',
@@ -54,72 +54,72 @@ describe('Parse an RSS 2.0 file', function() {
   it('Matches JSON object', function(done) {
 
     parser.on('type', function(data) {
-      assert.deepEqual(data, feed.type);
+      assert.deepEqual(data, feed1.type);
       events++;
     });
 
     parser.on('title', function(data) {
-      assert.equal(data, feed.title);
+      assert.equal(data, feed1.title);
       events++;
     });
 
     parser.on('link', function(data) {
-      assert.equal(data, feed.link);
+      assert.equal(data, feed1.link);
       events++;
     });
 
     parser.on('description', function(data) {
-      assert.equal(data, feed.description);
+      assert.equal(data, feed1.description);
       events++;
     });
 
     parser.on('language', function(data) {
-      assert.equal(data, feed.language);
+      assert.equal(data, feed1.language);
       events++;
     });
 
     parser.on('pubdate', function(data) {
-      assert.equal(data, feed.pubdate);
+      assert.equal(data, feed1.pubdate);
       events++;
     });
 
     parser.on('lastbuilddate', function(data) {
-      assert.equal(data, feed.lastbuilddate);
+      assert.equal(data, feed1.lastbuilddate);
       events++;
     });
 
     parser.on('docs', function(data) {
-      assert.equal(data, feed.docs);
+      assert.equal(data, feed1.docs);
       events++;
     });
 
     parser.on('generator', function(data) {
-      assert.equal(data, feed.generator);
+      assert.equal(data, feed1.generator);
       events++;
     });
 
     parser.on('managingeditor', function(data) {
-      assert.equal(data, feed.managingeditor);
+      assert.equal(data, feed1.managingeditor);
       events++;
     });
 
     parser.on('webmaster', function(data) {
-      assert.equal(data, feed.webmaster);
+      assert.equal(data, feed1.webmaster);
       events++;
     });
 
     parser.on('item', function(data) {
-      assert.equal(data.title, feed.items[item].title);
-      assert.equal(data.link, feed.items[item].link);
-      assert.equal(data.description, feed.items[item].description);
-      assert.equal(data.pubdate, feed.items[item].pubdate);
-      assert.equal(data.guid, feed.items[item].guid);
-      assert.deepEqual(data, feed.items[item]);
+      assert.equal(data.title, feed1.items[item].title);
+      assert.equal(data.link, feed1.items[item].link);
+      assert.equal(data.description, feed1.items[item].description);
+      assert.equal(data.pubdate, feed1.items[item].pubdate);
+      assert.equal(data.guid, feed1.items[item].guid);
+      assert.deepEqual(data, feed1.items[item]);
       item++;
       events++;
     });
 
-    parser.write(fs.readFileSync(file, 'utf8'));
+    parser.write(fs.readFileSync(file1, 'utf8'));
     done();
   });
 
@@ -132,10 +132,10 @@ describe('Parse an RSS 2.0 file', function() {
     var parser = new FeedMe(true);
 
     it('Returns matching Javascript object', function(done) {
-      fs.createReadStream(file).pipe(parser);
+      fs.createReadStream(file1).pipe(parser);
 
       parser.on('end', function() {
-        assert.deepEqual(parser.done(), feed);
+        assert.deepEqual(parser.done(), feed1);
         done();
       });
     });
