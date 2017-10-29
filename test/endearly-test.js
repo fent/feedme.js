@@ -1,29 +1,29 @@
-var FeedMe = require('..');
-var fs     = require('fs');
-var path   = require('path');
+const FeedMe = require('..');
+const fs     = require('fs');
+const path   = require('path');
 
 
-var file = path.join(__dirname, 'assets', 'jsonfeed.json');
+const file = path.join(__dirname, 'assets', 'jsonfeed.json');
 
-describe('End a stream early', function() {
-  describe('With data written', function() {
-    it('Items are emitted', function(done) {
+describe('End a stream early', () => {
+  describe('With data written', () => {
+    it('Items are emitted', (done) => {
       var parser = new FeedMe();
-      parser.on('item', function() {
+      parser.on('item', () => {
         done();
       });
-      fs.readFile(file, function(err, body) {
+      fs.readFile(file, (err, body) => {
         if (err) return done(err);
         parser.end(body);
       });
     });
   });
 
-  describe('With nothing written', function() {
-    it('Everything goes well', function(done) {
+  describe('With nothing written', () => {
+    it('Everything goes well', (done) => {
       var parser = new FeedMe();
       parser.on('end', done);
-      parser.on('item', function() {
+      parser.on('item', () => {
         throw new Error('There should be no items');
       });
       parser.end();
