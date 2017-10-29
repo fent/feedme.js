@@ -34,7 +34,7 @@
     "mocha": "*"
   },
   "engines": {
-    "node": ">=0.12"
+    "node": ">=4"
   },
   "license": "MIT"
 }

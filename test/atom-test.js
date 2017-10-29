@@ -1,11 +1,11 @@
-var FeedMe = require('..');
-var fs     = require('fs');
-var path   = require('path');
-var assert = require('assert');
+const FeedMe = require('..');
+const fs     = require('fs');
+const path   = require('path');
+const assert = require('assert');
 
 
-var file = path.join(__dirname, 'assets', 'atom.xml');
-var feed = {
+const file = path.join(__dirname, 'assets', 'atom.xml');
+const feed = {
   type: 'atom',
   title: 'dive into mark',
   subtitle: 'A <em>lot</em> of effort\nwent into making this effortless',
@@ -80,58 +80,58 @@ var feed = {
 };
 
 
-describe('Parse an Atom file', function() {
+describe('Parse an Atom file', () => {
   var parser = new FeedMe();
   var events = 0;
 
-  it('Events emitted match expected', function(done) {
+  it('Events emitted match expected', (done) => {
 
-    parser.on('type', function(data) {
+    parser.on('type', (data) => {
       assert.deepEqual(data, feed.type);
       events++;
     });
 
-    parser.on('title', function(data) {
+    parser.on('title', (data) => {
       assert.deepEqual(data, feed.title);
       events++;
     });
 
-    parser.on('subtitle', function(data) {
+    parser.on('subtitle', (data) => {
       assert.deepEqual(data, feed.subtitle);
       events++;
     });
 
-    parser.on('updated', function(data) {
+    parser.on('updated', (data) => {
       assert.equal(data, feed.updated);
       events++;
     });
 
-    parser.on('id', function(data) {
+    parser.on('id', (data) => {
       assert.equal(data, feed.id);
       events++;
     });
 
-    parser.once('link', function(data) {
+    parser.once('link', (data) => {
       assert.deepEqual(data, feed.link[0]);
       events++;
 
-      parser.once('link', function(data) {
+      parser.once('link', (data) => {
         assert.deepEqual(data, feed.link[1]);
         events++;
       });
     });
 
-    parser.on('rights', function(data) {
+    parser.on('rights', (data) => {
       assert.equal(data, feed.rights);
       events++;
     });
 
-    parser.on('generator', function(data) {
+    parser.on('generator', (data) => {
       assert.deepEqual(data, feed.generator);
       events++;
     });
 
-    parser.on('item', function(data) {
+    parser.on('item', (data) => {
       assert.deepEqual(data.title, feed.items[0].title);
       assert.deepEqual(data.link, feed.items[0].link);
       assert.deepEqual(data.id, feed.items[0].id);
@@ -148,18 +148,18 @@ describe('Parse an Atom file', function() {
     parser.on('end', done);
   });
 
-  after(function() {
+  after(() => {
     assert.equal(events, 10);
     assert.deepEqual(parser.done(), undefined);
   });
 
-  describe('with buffer on', function() {
+  describe('with buffer on', () => {
     var parser = new FeedMe(true);
 
-    it('Returns matching Javascript object', function(done) {
+    it('Returns matching Javascript object', (done) => {
       fs.createReadStream(file).pipe(parser);
 
-      parser.on('end', function() {
+      parser.on('end', () => {
         assert.deepEqual(parser.done(), feed);
         done();
       });

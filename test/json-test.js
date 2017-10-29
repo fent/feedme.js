@@ -1,12 +1,11 @@
-var FeedMe = require('..');
-var fs     = require('fs');
-var path   = require('path');
-var assert = require('assert');
+const FeedMe = require('..');
+const fs     = require('fs');
+const path   = require('path');
+const assert = require('assert');
 
 
-/* jshint maxlen:false */
-var file = path.join(__dirname, 'assets', 'jsonfeed.json');
-var feed = {
+const file = path.join(__dirname, 'assets', 'jsonfeed.json');
+const feed = {
   'type': 'json',
   'xmlns' : 'http://www.w3.org/2005/Atom',
   'xmlns$openSearch' : 'http://a9.com/-/spec/opensearchrss/1.0/',
@@ -17,19 +16,19 @@ var feed = {
     'rel' : 'alternate',
     'type' : 'text/html',
     'href' : 'http://beautifulbeta.blogspot.com/index.html'
-    },{
+  },{
     'rel' : 'next',
     'type' : 'application/atom+xml',
     'href' : 'http://beautifulbeta.blogspot.com/feeds/posts/default?alt=json-in-script&start-index=26&max-results=25'
-    },{
+  },{
     'rel' : 'http://schemas.google.com/g/2005#feed',
     'type' : 'application/atom+xml',
     'href' : 'http://beautifulbeta.blogspot.com/feeds/posts/default'
-    },{
+  },{
     'rel' : 'self',
     'type' : 'application/atom+xml',
     'href' : 'http://beautifulbeta.blogspot.com/feeds/posts/default?alt=json-in-script'
-    } ],
+  } ],
   'author' : [ { 
     'name' : 'Beta Bloke'
   } ],
@@ -48,18 +47,18 @@ var feed = {
     'category' : [ {
       'scheme' : 'http://www.blogger.com/atom/ns#',
       'term' : 'tools'
-     } ],
+    } ],
     'title' : 'What\'s Up Here',
     'content' :  'It has been very quiet on .....',
     'link' : [ {
       'rel' : 'alternate',
       'type' : 'text/html',
       'href' : 'http://beautifulbeta.blogspot.com/2007/03/whats-up-here.html'
-      },{
+    },{
       'rel' : 'self',
       'type' : 'application/atom+xml',
       'href' : 'http://beautifulbeta.blogspot.com/feeds/posts/default/8097606299472435819'
-      },{
+    },{
       'rel' : 'edit',
       'type' : 'application/atom+xml',
       'href' : 'http://www.blogger.com/feeds/934829683866516411/posts/default/8097606299472435819'
@@ -71,59 +70,59 @@ var feed = {
 };
 
 
-describe('Parse a JSON feed file', function() {
+describe('Parse a JSON feed file', () => {
   var parser = new FeedMe();
   var events = 0;
   var item = 0;
 
-  it('Events emitted match expected', function(done) {
+  it('Events emitted match expected', (done) => {
 
-    parser.on('type', function(data) {
+    parser.on('type', (data) => {
       assert.deepEqual(data, feed.type);
       events++;
     });
 
-    parser.on('title', function(data) {
+    parser.on('title', (data) => {
       assert.deepEqual(data, feed.title);
       events++;
     });
 
-    parser.on('updated', function(data) {
+    parser.on('updated', (data) => {
       assert.deepEqual(data, feed.updated);
       events++;
     });
 
-    parser.on('id', function(data) {
+    parser.on('id', (data) => {
       assert.deepEqual(data, feed.id);
       events++;
     });
 
-    parser.once('link', function(data) {
+    parser.once('link', (data) => {
       assert.deepEqual(data, feed.link[0]);
       events++;
 
-      parser.once('link', function(data) {
+      parser.once('link', (data) => {
         assert.deepEqual(data, feed.link[1]);
         events++;
 
-        parser.once('link', function(data) {
+        parser.once('link', (data) => {
           assert.deepEqual(data, feed.link[2]);
           events++;
         });
       });
     });
 
-    parser.on('author', function(data) {
+    parser.on('author', (data) => {
       assert.deepEqual(data, feed.author[0]);
       events++;
     });
 
-    parser.on('generator', function(data) {
+    parser.on('generator', (data) => {
       assert.deepEqual(data, feed.generator);
       events++;
     });
 
-    parser.on('item', function(data) {
+    parser.on('item', (data) => {
       assert.deepEqual(data.title, feed.items[item].title);
       assert.deepEqual(data.link, feed.items[item].link);
       assert.deepEqual(data.id, feed.items[item].id);
@@ -139,19 +138,19 @@ describe('Parse a JSON feed file', function() {
     parser.on('end', done);
   });
 
-  after(function() {
+  after(() => {
     assert.equal(events, 9);
     assert.equal(item, 1);
     assert.deepEqual(parser.done(), undefined);
   });
 
-  describe('with buffer on', function() {
+  describe('with buffer on', () => {
     var parser = new FeedMe(true);
 
-    it('Returns matching Javascript object', function(done) {
+    it('Returns matching Javascript object', (done) => {
       fs.createReadStream(file).pipe(parser);
 
-      parser.on('end', function() {
+      parser.on('end', () => {
         assert.deepEqual(parser.done(), feed);
         done();
       });

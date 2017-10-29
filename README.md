@@ -10,16 +10,16 @@ feedme.js is an RSS/Atom/JSON feed parser. How is this different from the other 
 
 # Usage
 
-```javascript
-var FeedMe = require('feedme');
-var http = require('http');
+```js
+const FeedMe = require('feedme');
+const http = require('http');
 
-http.get('http://www.npr.org/rss/rss.php?id=1001', function(res) {
+http.get('http://www.npr.org/rss/rss.php?id=1001', (res) => {
   var parser = new FeedMe();
-  parser.on('title', function(title) {
+  parser.on('title', (title) => {
     console.log('title of feed is', title);
   });
-  parser.on('item', function(item) {
+  parser.on('item', (item) => {
     console.log();
     console.log('news:', item.title);
     console.log(item.description);
@@ -40,14 +40,14 @@ Write to the parser.
 ### parser.done()
 Can only be used if `buffer` is `true`. It returns the feed as a Javascript object, should be called after `end` is emitted from the parser. Subelements are put as children objects with their names as keys. When one object has more than one child of the same name, they are put into an array. Items are always put into an array.
 
-```javascript
-var FeedMe = require('feedme');
-var http = require('http');
+```js
+const FeedMe = require('feedme');
+const http = require('http');
 
-http.get('https://nodejs.org/en/feed/blog.xml', function(res) {
+http.get('https://nodejs.org/en/feed/blog.xml', (res) => {
   var parser = new FeedMe(true);
   res.pipe(parser);
-  parser.on('end', function() {
+  parser.on('end', () => {
     console.log(parser.done());
   });
 });
@@ -55,7 +55,7 @@ http.get('https://nodejs.org/en/feed/blog.xml', function(res) {
 
 An example of what `parser.done()` could return.
 
-```javascript
+```js
 {
   type: 'rss 2.0',
   title: 'Liftoff News',
@@ -107,8 +107,8 @@ Emitted whenever the parser finds a new feed item. An item can be inside an `<it
 
 Emitted whenever a tag on the root of the document is finished parsing. The root being the `<channel>` or `<feed>` tag. Example:
 
-```javascript
-parser.on('description', function(d) {
+```js
+parser.on('description', (d) => {
   // do something
 });
 ```
@@ -124,9 +124,7 @@ Emitted when there is an error parsing the document.
 
 # Install
 
-```bash
-npm install feedme
-```
+    npm install feedme
 
 
 # Tests
