@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:syn="http://purl.org/rss/1.0/modules/syndication/" xmlns:admin="http://webns.net/mvcb/">
+  <channel rdf:about="http://pinboard.in">
+    <title>Pinboard (items tagged hardware)</title>
+    <link>https://pinboard.in/t:hardware/</link>
+    <description></description>
+    <items>
+      <rdf:Seq>	<rdf:li rdf:resource="https://sigrok.org/blog/fx2grok-tiny-11x11mm-fx2-based-open-hardware-logic-analyzer-use-sigrok"/>
+	<rdf:li rdf:resource="https://docs.google.com/spreadsheets/d/1xszfg-GNkOKoKZBIpo42cWLtPWg2hmbCcRD0wiCwTiA/htmlview#"/>
+	<rdf:li rdf:resource="https://software.intel.com/en-us/blogs/2014/02/19/why-has-cpu-frequency-ceased-to-grow"/>
+	<rdf:li rdf:resource="https://www.rossmanngroup.com/"/>
+	<rdf:li rdf:resource="https://uk.pcpartpicker.com/products/memory/#Z=16384002&amp;m=11&amp;s=301600&amp;t=11&amp;sort=price&amp;page=1"/>
+	<rdf:li rdf:resource="https://www.cdw.com/product/StarTech.com-Thunderbolt-3-Dock-SD-Card-Reader-Dual-4K-85W-USB-PD/4939123"/>
+	<rdf:li rdf:resource="http://musically.com/2018/02/20/spotify-way-creating-first-hardware/"/>
+	<rdf:li rdf:resource="http://www.winmate.com.tw/IndustrialDisplay/LcdSpec.asp?Prod=01_0596&amp;Typeid=B010103"/>
+	<rdf:li rdf:resource="https://www.alibaba.com/product-detail/8-8-inch-1920x480-TFT-LCD_60405442794.html?spm=a2700.7724857/A.main07.15.5f66ce4bk9jmFM"/>
+	<rdf:li rdf:resource="http://www.chassis-plans.com/military-monitors-lcd-displays/tfx-rackmount-triple-lcd-display/"/>
+	<rdf:li rdf:resource="https://www.pjrc.com/teensy/"/>
+	<rdf:li rdf:resource="https://lobste.rs/s/bsefhx"/>
+	<rdf:li rdf:resource="https://www.youtube.com/watch?v=i0SNb__dkYI"/>
+	<rdf:li rdf:resource="http://www.wa5vjb.com/products.html"/>
+	<rdf:li rdf:resource="https://www.datenreise.de/macbook-pro-retina-ssd-aufruesten-anleitung/"/>
+	<rdf:li rdf:resource="https://macandegg.de/upkeep/macbook-pro-retina-aufruesten-ssd-tauschen-und-speicher-erweitern/"/>
+	<rdf:li rdf:resource="https://de.ifixit.com/Anleitung/MacBook+Pro+15-Inch+Retina+Display+Ende+2013+SSD+austauschen/23431"/>
+	<rdf:li rdf:resource="https://www.theverge.com/2018/2/13/17007104/google-pixel-total-sales-idc-statistics"/>
+	<rdf:li rdf:resource="https://software.intel.com/en-us/blogs/2014/02/19/why-has-cpu-frequency-ceased-to-grow"/>
+	<rdf:li rdf:resource="http://forum.notebookreview.com/threads/liquid-metal-showdown-thermal-grizzly-conductonaut-vs-cool-laboratory-liquid-ultra-pro.791489/"/>
+	<rdf:li rdf:resource="https://www.youtube.com/watch?v=SGJ5cZnoodY"/>
+	<rdf:li rdf:resource="http://iotlist.co/"/>
+	<rdf:li rdf:resource="https://www.heise.de/forum/c-t/Kommentare-zu-c-t-Artikeln/Heim-Server-im-Selbstbau/Gesammelte-Tipps-FAQ-zu-D3400-und-D3417-November-Edition/thread-5072832/#posting_29433680"/>
+	<rdf:li rdf:resource="https://support.apple.com/en-us/HT201853"/>
+	<rdf:li rdf:resource="https://www.ebay.com/itm/USB-Mini-58mm-POS-Thermal-Dot-Receipt-Bill-Printer-Set-Roll-Paper-Supermarket-US/301754687646?epid=2073468312&amp;hash=item4641fb209e:g:V~EAAOSwceNaXjJ9"/>
+	<rdf:li rdf:resource="https://www.nu42.com/2015/08/playing-with-true-rng-hardware-random-number-generator.html"/>
+	<rdf:li rdf:resource="https://www.preining.info/blog/2016/04/gnupg-subkeys-yubikey/"/>
+	<rdf:li rdf:resource="https://thenextweb.com/insider/2018/02/21/spotify-way-creating-first-hardware-product/"/>
+	<rdf:li rdf:resource="https://www.pbtech.co.nz/"/>
+	<rdf:li rdf:resource="https://feedbin.com/blog/2018/02/20/hardware-upgrades/"/>
+	<rdf:li rdf:resource="http://www.netexpresslabs.com/cases/scsi.html"/>
+	<rdf:li rdf:resource="http://www.cablesonline.com/4bay525exscs.html"/>
+	<rdf:li rdf:resource="http://blog.opto22.com/optoblog/youre-the-first-to-know-about-our-epic-announcement"/>
+	<rdf:li rdf:resource="https://www.thefuturewas8bit.com/index.php/divmmcfuture"/>
+	<rdf:li rdf:resource="https://evoluent.com/"/>
+	<rdf:li rdf:resource="https://twitter.com/hashtag/plottertwitter"/>
+	<rdf:li rdf:resource="http://iamdustan.com/2015/12/16/react-hardware/"/>
+	<rdf:li rdf:resource="https://github.com/nebrius/raspi"/>
+	<rdf:li rdf:resource="https://www.hackster.io/IainIsCreative/javascript-with-hardware-part-two-using-modern-javascript-c6f818"/>
+	<rdf:li rdf:resource="https://www.imore.com/how-watch-live-tv-your-apple-tv-without-cable"/>
+	<rdf:li rdf:resource="https://www.theverge.com/circuitbreaker/2018/2/20/17031256/worlds-largest-ssd-drive-samsung-30-terabyte-pm1643"/>
+	<rdf:li rdf:resource="http://fibrevillage.com/sysadmin/240-how-to-identify-defective-dimm-from-edac-error-on-linux-2"/>
+	<rdf:li rdf:resource="https://www.hackster.io/johnny-five/products/johnny-five"/>
+	<rdf:li rdf:resource="http://die-schwarzwald-werbeagentur.zazudesign.de/hardware/schneller-linux-fileserver-datenserver-im-eigenbau-teil-1-hardware.html"/>
+	<rdf:li rdf:resource="https://github.com/w3c/device-memory"/>
+	<rdf:li rdf:resource="https://www.marketwatch.com/story/this-chart-shows-the-modern-equivalent-of-bread-and-circuses-to-sate-the-masses-2018-02-12?link=sfmw_tw"/>
+	<rdf:li rdf:resource="http://www.harvarddesignmagazine.org/issues/38/eyes-that-do-not-see-tracking-the-self-in-the-age-of-the-data-center"/>
+	<rdf:li rdf:resource="https://www.sparkfun.com/products/14032"/>
+	<rdf:li rdf:resource="https://www.reddit.com/r/SuggestALaptop/"/>
+	<rdf:li rdf:resource="https://flirc.tv/"/>
+	<rdf:li rdf:resource="https://twitter.com/i/web/status/965852075400794112"/>
+	<rdf:li rdf:resource="http://variety.com/2018/biz/news/gibson-iconic-guitar-company-said-to-be-nearing-bankruptcy-1202704143/"/>
+	<rdf:li rdf:resource="https://www.oreilly.com/learning/build-a-super-fast-deep-learning-machine-for-under-1000"/>
+	<rdf:li rdf:resource="https://www.youtube.com/watch?v=tx-9LkVIdz0"/>
+	<rdf:li rdf:resource="https://www.cisco.com/c/en/us/products/collateral/switches/small-business-500-series-stackable-managed-switches/eos-eol-notice-c51-739827.html"/>
+	<rdf:li rdf:resource="https://www.amazon.com/dp/B009F7TXMK/ref=psdc_160354011_t1_B01790511Q"/>
+	<rdf:li rdf:resource="https://www.amazon.com/External-Enclosure-3-5-Inch-Desktop-Drive/dp/B001UNPNQ2"/>
+	<rdf:li rdf:resource="https://www.amazon.com/Magic-External-Aluminum-Drive-Enclosure/dp/B003OAH696"/>
+	<rdf:li rdf:resource="https://www.nativeunion.com/drop-wireless-charger"/>
+	<rdf:li rdf:resource="https://www.pinterest.com/r/pin/985231153281067/4766733815989148850/c66ba024e690744bf1cf53f462d91378a4af8109cd86bce185ec6a21c1e14ee3"/>
+	<rdf:li rdf:resource="http://www.righto.com/2018/02/repairing-card-reader-for-1960s.html?m=1"/>
+	<rdf:li rdf:resource="http://blog.initialstate.com/"/>
+	<rdf:li rdf:resource="https://ibuildmacs.com/products/macpro-2010-2011-12-core/"/>
+	<rdf:li rdf:resource="http://www.aholme.co.uk/GPS/Main.htm"/>
+	<rdf:li rdf:resource="https://arduino-esp8266.readthedocs.io/en/latest/"/>
+	<rdf:li rdf:resource="https://m.habrahabr.ru/post/345584/"/>
+	<rdf:li rdf:resource="https://github.com/randaller/cnn-rtlsdr"/>
+	<rdf:li rdf:resource="https://shop.mime.co.uk/collections/mearm"/>
+	<rdf:li rdf:resource="https://danluu.com/input-lag/"/>
+	<rdf:li rdf:resource="https://code.google.com/archive/p/rigkontrol3-linux-midicontroller/"/>
+      </rdf:Seq>
+    </items>
+  </channel><item rdf:about="https://sigrok.org/blog/fx2grok-tiny-11x11mm-fx2-based-open-hardware-logic-analyzer-use-sigrok">
+    <title>fx2grok-tiny: an 11x11mm FX2 based Open Hardware logic analyzer for use with sigrok | The ever-expanding world of sigrok</title>
+    <dc:date>2018-02-22T03:14:29+00:00</dc:date>
+    <link>https://sigrok.org/blog/fx2grok-tiny-11x11mm-fx2-based-open-hardware-logic-analyzer-use-sigrok</link>
+    <dc:creator>zak</dc:creator><dc:subject>logic analysis open hardware electronics</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:zak/b:9a997ad2c64e/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:zak/t:logic"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:zak/t:analysis"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:zak/t:open"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:zak/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:zak/t:electronics"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://docs.google.com/spreadsheets/d/1xszfg-GNkOKoKZBIpo42cWLtPWg2hmbCcRD0wiCwTiA/htmlview#">
+    <title>FrostyTech Synthetic Thermal Heatsink Test Results</title>
+    <dc:date>2018-02-22T01:00:20+00:00</dc:date>
+    <link>https://docs.google.com/spreadsheets/d/1xszfg-GNkOKoKZBIpo42cWLtPWg2hmbCcRD0wiCwTiA/htmlview#</link>
+    <dc:creator>killforlove</dc:creator><dc:subject>reference Hardware</dc:subject>
+<dc:identifier>http://pinboard.in/u:killforlove/b:d96c4ce0fd89/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:killforlove/t:reference"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:killforlove/t:Hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://software.intel.com/en-us/blogs/2014/02/19/why-has-cpu-frequency-ceased-to-grow">
+    <title>Why has CPU frequency ceased to grow? | Intel® Software</title>
+    <dc:date>2018-02-21T23:53:49+00:00</dc:date>
+    <link>https://software.intel.com/en-us/blogs/2014/02/19/why-has-cpu-frequency-ceased-to-grow</link>
+    <dc:creator>dahnielson</dc:creator><dc:subject>hardware cpu</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dahnielson/b:6074c9f25ea1/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dahnielson/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dahnielson/t:cpu"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.rossmanngroup.com/">
+    <title>Macbook Repair in NYC | 347-552-2258 »</title>
+    <dc:date>2018-02-21T23:08:30+00:00</dc:date>
+    <link>https://www.rossmanngroup.com/</link>
+    <dc:creator>andyhuey</dc:creator><description><![CDATA[We provide the best unauthorized MacBook, iPad & iPhone Repair in New York. You can come to our store for a free estimate without an appointment, or mail your device to us from anywhere in the world to receive service.]]></description>
+<dc:subject>mac apple hardware</dc:subject>
+<dc:identifier>http://pinboard.in/u:andyhuey/b:393dfbc29e5b/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:andyhuey/t:mac"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:andyhuey/t:apple"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:andyhuey/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://uk.pcpartpicker.com/products/memory/#Z=16384002&amp;m=11&amp;s=301600&amp;t=11&amp;sort=price&amp;page=1">
+    <title>Choose Memory - PCPartPicker United Kingdom</title>
+    <dc:date>2018-02-21T23:01:52+00:00</dc:date>
+    <link>https://uk.pcpartpicker.com/products/memory/#Z=16384002&amp;m=11&amp;s=301600&amp;t=11&amp;sort=price&amp;page=1</link>
+    <dc:creator>dparodi</dc:creator><dc:subject>hardware compare memory</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dparodi/b:280af805f44b/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dparodi/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dparodi/t:compare"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dparodi/t:memory"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.cdw.com/product/StarTech.com-Thunderbolt-3-Dock-SD-Card-Reader-Dual-4K-85W-USB-PD/4939123">
+    <title>StarTech.com Thunderbolt 3 Dock - SD Card Reader - Dual-4K - 85W USB PD</title>
+    <dc:date>2018-02-21T22:09:34+00:00</dc:date>
+    <link>https://www.cdw.com/product/StarTech.com-Thunderbolt-3-Dock-SD-Card-Reader-Dual-4K-85W-USB-PD/4939123</link>
+    <dc:creator>amy</dc:creator><dc:subject>hardware stuff</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:amy/b:cb4be623e86c/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:amy/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:amy/t:stuff"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://musically.com/2018/02/20/spotify-way-creating-first-hardware/">
+    <title>Spotify is ‘on its way’ to creating its first hardware according to job ad • Musically</title>
+    <dc:date>2018-02-21T20:40:08+00:00</dc:date>
+    <link>http://musically.com/2018/02/20/spotify-way-creating-first-hardware/</link>
+    <dc:creator>charlesarthur</dc:creator><description><![CDATA[: <blockquote><p>The role? “You will define and manage Distribution, Supply, Logistics, fulfillment and Customer Service for Hardware Products and work with partners to deliver the optimal Spotify experience to millions of users.”
+
+Based in Stockholm, this isn’t a job about managing integrations with third-party devices: among the job’s duties is to “manage the supply chain, demand and forecast & inventory”.
+
+Separate ads for a Senior Project Manager: Hardware Production and Project Manager: Hardware Production & Engineering are also indications that Spotify’s hardware plans are ramping up.
+
+Many people will leap to ‘smart speaker’ as the assumption about what the first Spotify-branded hardware product will be. Which begs the question: if so, where will its voice assistant – its equivalent of Alexa, Google Assistant and Siri – come from?</p></blockquote>
+
+We <a href="https://zatznotfunny.com/2017-04/spotify-wearable/">last heard about this in April 2017</a> and still there's no word of what this might be. Wearable? Smart speaker? Dumb speaker? Wait for production to start in the Far East, then I give it a couple of weeks to a leak.]]></description>
+<dc:subject>Spotify hardware</dc:subject>
+<dc:identifier>http://pinboard.in/u:charlesarthur/b:523404664ee9/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:charlesarthur/t:Spotify"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:charlesarthur/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.winmate.com.tw/IndustrialDisplay/LcdSpec.asp?Prod=01_0596&amp;Typeid=B010103">
+    <title>W19L100-OFA1 | Industrial Displays | 01_0596 | WINMATE</title>
+    <dc:date>2018-02-21T20:03:34+00:00</dc:date>
+    <link>http://www.winmate.com.tw/IndustrialDisplay/LcdSpec.asp?Prod=01_0596&amp;Typeid=B010103</link>
+    <dc:creator>ash</dc:creator><description><![CDATA[19" wide display, put this on the front of your serverrrrr]]></description>
+<dc:subject>monitors hardware</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:ash/b:c295e964b95a/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:ash/t:monitors"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:ash/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.alibaba.com/product-detail/8-8-inch-1920x480-TFT-LCD_60405442794.html?spm=a2700.7724857/A.main07.15.5f66ce4bk9jmFM">
+    <title>8.8 Inch 1920x480 Tft Lcd Display Bar Type Tft Lcd Screen Stretched Lcd Panel - Buy 8.8 Inch 1920x480 Tft Lcd,8.8 Inch Bar Type Lcd Screen,8.8 Inch Stretched Lcd Panel Product on Alibaba.com</title>
+    <dc:date>2018-02-21T19:40:41+00:00</dc:date>
+    <link>https://www.alibaba.com/product-detail/8-8-inch-1920x480-TFT-LCD_60405442794.html?spm=a2700.7724857/A.main07.15.5f66ce4bk9jmFM</link>
+    <dc:creator>ash</dc:creator><description><![CDATA[bar-type display is the search term for these kind of weird screens]]></description>
+<dc:subject>monitors hardware</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:ash/b:c7a17447b11e/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:ash/t:monitors"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:ash/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.chassis-plans.com/military-monitors-lcd-displays/tfx-rackmount-triple-lcd-display/">
+    <title>TFX 3 LCD Military Grade Rugged RackMount Display Monitor</title>
+    <dc:date>2018-02-21T19:40:01+00:00</dc:date>
+    <link>http://www.chassis-plans.com/military-monitors-lcd-displays/tfx-rackmount-triple-lcd-display/</link>
+    <dc:creator>ash</dc:creator><dc:subject>ha hardware rackmount monitors</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:ash/b:f0d1ce736f60/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:ash/t:ha"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:ash/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:ash/t:rackmount"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:ash/t:monitors"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.pjrc.com/teensy/">
+    <title>Teensy USB Development Board</title>
+    <dc:date>2018-02-21T18:37:05+00:00</dc:date>
+    <link>https://www.pjrc.com/teensy/</link>
+    <dc:creator>Brandonshire</dc:creator><description><![CDATA[This  might be the board to use to make my Colecovision/Intellivision/Atari 5200 controller. Has a fair number of inputs and I'm learning about ways to use one input for more than one button. It will definitely run the joystick library I saved earlier so that's an advantage.]]></description>
+<dc:subject>electronics hardware arduino arcade diy colecovision intellivision atari atari5200 emulation raspberrypi</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:Brandonshire/b:3bb32bb8d655/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:Brandonshire/t:electronics"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:Brandonshire/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:Brandonshire/t:arduino"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:Brandonshire/t:arcade"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:Brandonshire/t:diy"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:Brandonshire/t:colecovision"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:Brandonshire/t:intellivision"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:Brandonshire/t:atari"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:Brandonshire/t:atari5200"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:Brandonshire/t:emulation"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:Brandonshire/t:raspberrypi"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://lobste.rs/s/bsefhx">
+    <title>How a 555 Timer IC Works | Lobsters</title>
+    <dc:date>2018-02-21T18:05:21+00:00</dc:date>
+    <link>https://lobste.rs/s/bsefhx</link>
+    <dc:creator>tjweir</dc:creator><description><![CDATA[How a 555 Timer IC Works
+via @flyingfisch_
+ #video #hardware
+]]></description>
+<dc:subject>video hardware</dc:subject>
+<dc:source>http://twitter.com/</dc:source>
+<dc:identifier>http://pinboard.in/u:tjweir/b:82e6b1651953/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:tjweir/t:video"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:tjweir/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.youtube.com/watch?v=i0SNb__dkYI">
+    <title>Untitled (https://www.youtube.com/watch?v=i0SNb__dkYI)</title>
+    <dc:date>2018-02-21T18:05:21+00:00</dc:date>
+    <link>https://www.youtube.com/watch?v=i0SNb__dkYI</link>
+    <dc:creator>tjweir</dc:creator><description><![CDATA[How a 555 Timer IC Works
+via @flyingfisch_
+ #video #hardware
+]]></description>
+<dc:subject>video hardware</dc:subject>
+<dc:source>http://twitter.com/</dc:source>
+<dc:identifier>http://pinboard.in/u:tjweir/b:ede3ccb85164/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:tjweir/t:video"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:tjweir/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.wa5vjb.com/products.html">
+    <title>Printed Circuit Board Antennas| Commercial and Hobby Antennas</title>
+    <dc:date>2018-02-21T17:23:14+00:00</dc:date>
+    <link>http://www.wa5vjb.com/products.html</link>
+    <dc:creator>horshacktest</dc:creator><dc:subject>wireless hardware network</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:horshacktest/b:3efea00bfbf3/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:horshacktest/t:wireless"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:horshacktest/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:horshacktest/t:network"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.datenreise.de/macbook-pro-retina-ssd-aufruesten-anleitung/">
+    <title>MacBook Pro Retina: SSD aufrüsten (Anleitung) › Datenreise</title>
+    <dc:date>2018-02-21T13:40:11+00:00</dc:date>
+    <link>https://www.datenreise.de/macbook-pro-retina-ssd-aufruesten-anleitung/</link>
+    <dc:creator>michaelhheng</dc:creator><dc:subject>macbook ssd hardware</dc:subject>
+<dc:identifier>http://pinboard.in/u:michaelhheng/b:0150ff9af9e5/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:michaelhheng/t:macbook"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:michaelhheng/t:ssd"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:michaelhheng/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://macandegg.de/upkeep/macbook-pro-retina-aufruesten-ssd-tauschen-und-speicher-erweitern/">
+    <title>MacBook Pro Retina aufrüsten: SSD tauschen und Speicher erweitern - mac&amp;egg</title>
+    <dc:date>2018-02-21T13:39:59+00:00</dc:date>
+    <link>https://macandegg.de/upkeep/macbook-pro-retina-aufruesten-ssd-tauschen-und-speicher-erweitern/</link>
+    <dc:creator>michaelhheng</dc:creator><dc:subject>macbook ssd hardware</dc:subject>
+<dc:identifier>http://pinboard.in/u:michaelhheng/b:3b9245b08617/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:michaelhheng/t:macbook"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:michaelhheng/t:ssd"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:michaelhheng/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://de.ifixit.com/Anleitung/MacBook+Pro+15-Inch+Retina+Display+Ende+2013+SSD+austauschen/23431">
+    <title>MacBook Pro 15&quot; Retina Display Ende 2013 SSD austauschen - iFixit</title>
+    <dc:date>2018-02-21T13:39:52+00:00</dc:date>
+    <link>https://de.ifixit.com/Anleitung/MacBook+Pro+15-Inch+Retina+Display+Ende+2013+SSD+austauschen/23431</link>
+    <dc:creator>michaelhheng</dc:creator><dc:subject>ifixit macbook ssd hardware</dc:subject>
+<dc:identifier>http://pinboard.in/u:michaelhheng/b:29aadbcf68f6/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:michaelhheng/t:ifixit"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:michaelhheng/t:macbook"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:michaelhheng/t:ssd"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:michaelhheng/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.theverge.com/2018/2/13/17007104/google-pixel-total-sales-idc-statistics">
+    <title>Google sold 3.9 million Pixel phones in 2017 - The Verge</title>
+    <dc:date>2018-02-21T11:44:17+00:00</dc:date>
+    <link>https://www.theverge.com/2018/2/13/17007104/google-pixel-total-sales-idc-statistics</link>
+    <dc:creator>dancall</dc:creator><description><![CDATA[In the 16 months since its initial release in October 2016, Google’s Pixel family of phones has earned plenty of acclaim and scrutiny, but not very many sales. The latest update on Pixel sales comes from IDC’s Francisco Jeronimo, who notes that Google shipped 3.9 million Pixel and Pixel 2 devices in 2017. That’s no more than a rounding error when set against the global smartphone market that numbers 1.5 billion units, and it’s also less than a typical week’s worth of iPhone sales for Apple.]]></description>
+<dc:subject>mobile hardware stats google</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dancall/b:6b172616f10d/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dancall/t:mobile"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dancall/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dancall/t:stats"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dancall/t:google"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://software.intel.com/en-us/blogs/2014/02/19/why-has-cpu-frequency-ceased-to-grow">
+    <title>Why has CPU frequency ceased to grow? | Intel® Software</title>
+    <dc:date>2018-02-21T11:17:12+00:00</dc:date>
+    <link>https://software.intel.com/en-us/blogs/2014/02/19/why-has-cpu-frequency-ceased-to-grow</link>
+    <dc:creator>mkeller</dc:creator><dc:subject>cpu hardware</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:mkeller/b:10a078ef9377/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:mkeller/t:cpu"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:mkeller/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://forum.notebookreview.com/threads/liquid-metal-showdown-thermal-grizzly-conductonaut-vs-cool-laboratory-liquid-ultra-pro.791489/">
+    <title>[Liquid Metal Showdown] Thermal Grizzly Conductonaut vs Cool Laboratory Liquid Ultra / Pro | NotebookReview</title>
+    <dc:date>2018-02-21T11:00:24+00:00</dc:date>
+    <link>http://forum.notebookreview.com/threads/liquid-metal-showdown-thermal-grizzly-conductonaut-vs-cool-laboratory-liquid-ultra-pro.791489/</link>
+    <dc:creator>dakull</dc:creator><dc:subject>hardware-tweaking hardware</dc:subject>
+<dc:identifier>http://pinboard.in/u:dakull/b:5955881582a7/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dakull/t:hardware-tweaking"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dakull/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.youtube.com/watch?v=SGJ5cZnoodY">
+    <title>Shenzhen: The Silicon Valley of Hardware (Full Documentary) | Future Cities | WIRED - YouTube</title>
+    <dc:date>2018-02-21T09:49:02+00:00</dc:date>
+    <link>https://www.youtube.com/watch?v=SGJ5cZnoodY</link>
+    <dc:creator>whyleyc</dc:creator><dc:subject>startup hardware shenzen documentary youtube</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:whyleyc/b:d19d80ad2b03/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:whyleyc/t:startup"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:whyleyc/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:whyleyc/t:shenzen"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:whyleyc/t:documentary"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:whyleyc/t:youtube"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://iotlist.co/">
+    <title>IOTLIST - Discover the Internet of Things</title>
+    <dc:date>2018-02-21T08:00:23+00:00</dc:date>
+    <link>http://iotlist.co/</link>
+    <dc:creator>allenown</dc:creator><dc:subject>hardware list iot</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:allenown/b:f544dc8fd2fb/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:allenown/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:allenown/t:list"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:allenown/t:iot"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.heise.de/forum/c-t/Kommentare-zu-c-t-Artikeln/Heim-Server-im-Selbstbau/Gesammelte-Tipps-FAQ-zu-D3400-und-D3417-November-Edition/thread-5072832/#posting_29433680">
+    <title>Gesammelte Tipps / FAQ zu D3400 und D3417 No… | Forum - heise online</title>
+    <dc:date>2018-02-21T07:48:30+00:00</dc:date>
+    <link>https://www.heise.de/forum/c-t/Kommentare-zu-c-t-Artikeln/Heim-Server-im-Selbstbau/Gesammelte-Tipps-FAQ-zu-D3400-und-D3417-November-Edition/thread-5072832/#posting_29433680</link>
+    <dc:creator>mkbauer</dc:creator><dc:subject>hardware faq</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:mkbauer/b:2fc747c1d8ac/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:mkbauer/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:mkbauer/t:faq"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://support.apple.com/en-us/HT201853">
+    <title>About Apple video adapters and cables</title>
+    <dc:date>2018-02-21T06:11:55+00:00</dc:date>
+    <link>https://support.apple.com/en-us/HT201853</link>
+    <dc:creator>sojourner</dc:creator><description><![CDATA[Learn about the adapters and cables that you can use to connect an external display or projector to your Mac]]></description>
+<dc:subject>hardware audiovisual</dc:subject>
+<dc:identifier>http://pinboard.in/u:sojourner/b:091dd2745b2f/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:sojourner/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:sojourner/t:audiovisual"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.ebay.com/itm/USB-Mini-58mm-POS-Thermal-Dot-Receipt-Bill-Printer-Set-Roll-Paper-Supermarket-US/301754687646?epid=2073468312&amp;hash=item4641fb209e:g:V~EAAOSwceNaXjJ9">
+    <title>USB Mini 58mm POS Thermal Dot Receipt Bill Printer Set Roll Paper Supermarket US | eBay</title>
+    <dc:date>2018-02-21T05:25:43+00:00</dc:date>
+    <link>https://www.ebay.com/itm/USB-Mini-58mm-POS-Thermal-Dot-Receipt-Bill-Printer-Set-Roll-Paper-Supermarket-US/301754687646?epid=2073468312&amp;hash=item4641fb209e:g:V~EAAOSwceNaXjJ9</link>
+    <dc:creator>jbmorley</dc:creator><description><![CDATA[USB Mini 58mm POS/ESC Thermal Dot Receipt Printer Set 384 Line. Fast printing up to 90mm for both text & graphics. Support store logo download and print (bmp file). Support bar code print. Drop-in paper loading. Click for Full Description. | eBay!]]></description>
+<dc:subject>hardware development</dc:subject>
+<dc:identifier>http://pinboard.in/u:jbmorley/b:775d9194127f/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:jbmorley/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:jbmorley/t:development"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.nu42.com/2015/08/playing-with-true-rng-hardware-random-number-generator.html">
+    <title>Playing with the TrueRNG 2 hardware random number generator</title>
+    <dc:date>2018-02-21T05:14:42+00:00</dc:date>
+    <link>https://www.nu42.com/2015/08/playing-with-true-rng-hardware-random-number-generator.html</link>
+    <dc:creator>po</dc:creator><dc:subject>linux perl randomness truerng hardware infosec security entropy</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:po/b:dc3285ca2404/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:po/t:linux"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:perl"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:randomness"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:truerng"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:infosec"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:security"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:entropy"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.preining.info/blog/2016/04/gnupg-subkeys-yubikey/">
+    <title>GnuPG notes: subkeys, yubikey, gpg1 vs gpg2 – There and back again</title>
+    <dc:date>2018-02-21T05:10:07+00:00</dc:date>
+    <link>https://www.preining.info/blog/2016/04/gnupg-subkeys-yubikey/</link>
+    <dc:creator>po</dc:creator><dc:subject>tutorial howto linux security infosec gnupg gpg pgp yubikey hardware tokens key.management</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:po/b:57308043d8ea/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:po/t:tutorial"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:howto"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:linux"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:security"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:infosec"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:gnupg"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:gpg"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:pgp"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:yubikey"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:tokens"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:po/t:key.management"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://thenextweb.com/insider/2018/02/21/spotify-way-creating-first-hardware-product/">
+    <title>Spotify 'on its way' to creating first hardware product</title>
+    <dc:date>2018-02-21T04:33:32+00:00</dc:date>
+    <link>https://thenextweb.com/insider/2018/02/21/spotify-way-creating-first-hardware-product/</link>
+    <dc:creator>jasonquinlan</dc:creator><description><![CDATA[via Pinboard (jasonquinlan) https://pinboard.in/u:jasonquinlan/public/]]></description>
+<dc:subject>Spotify 'on its way' to creating first hardware product</dc:subject>
+<dc:source>http://twitter.com/</dc:source>
+<dc:identifier>http://pinboard.in/u:jasonquinlan/b:66710ec133a9/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:jasonquinlan/t:Spotify"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:jasonquinlan/t:'on"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:jasonquinlan/t:its"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:jasonquinlan/t:way'"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:jasonquinlan/t:to"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:jasonquinlan/t:creating"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:jasonquinlan/t:first"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:jasonquinlan/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:jasonquinlan/t:product"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.pbtech.co.nz/">
+    <title>Computer Parts, Laptops, Tablets, Monitors, Mobile Phones &amp; More - PBTech.co.nz</title>
+    <dc:date>2018-02-21T01:51:31+00:00</dc:date>
+    <link>https://www.pbtech.co.nz/</link>
+    <dc:creator>tripps</dc:creator><dc:subject>NewZealand computer hardware</dc:subject>
+<dc:identifier>http://pinboard.in/u:tripps/b:434373979c0c/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:tripps/t:NewZealand"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:tripps/t:computer"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:tripps/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://feedbin.com/blog/2018/02/20/hardware-upgrades/">
+    <title>Hardware Upgrades</title>
+    <dc:date>2018-02-21T00:58:14+00:00</dc:date>
+    <link>https://feedbin.com/blog/2018/02/20/hardware-upgrades/</link>
+    <dc:creator>angusf</dc:creator><dc:subject>hardware webdev</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:angusf/b:8ba1b8dc1d19/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:angusf/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:angusf/t:webdev"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.netexpresslabs.com/cases/scsi.html">
+    <title>Net Express - SCSI cases</title>
+    <dc:date>2018-02-20T23:06:51+00:00</dc:date>
+    <link>http://www.netexpresslabs.com/cases/scsi.html</link>
+    <dc:creator>rubenerd</dc:creator><description><![CDATA[Or these could also work, though they're on the pricy side]]></description>
+<dc:subject>scsi enclosures hardware mmxtower</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:rubenerd/b:8c7ce71d545a/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:rubenerd/t:scsi"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:rubenerd/t:enclosures"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:rubenerd/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:rubenerd/t:mmxtower"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.cablesonline.com/4bay525exscs.html">
+    <title>4 Bay 5.25&quot; External SCSI Case - Cables Online</title>
+    <dc:date>2018-02-20T23:06:16+00:00</dc:date>
+    <link>http://www.cablesonline.com/4bay525exscs.html</link>
+    <dc:creator>rubenerd</dc:creator><description><![CDATA[Would be perfect for my vintage tower, so of course they're out of stock!]]></description>
+<dc:subject>scsi enclosures hardware mmxtower</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:rubenerd/b:33361951017f/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:rubenerd/t:scsi"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:rubenerd/t:enclosures"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:rubenerd/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:rubenerd/t:mmxtower"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://blog.opto22.com/optoblog/youre-the-first-to-know-about-our-epic-announcement">
+    <title>You're the first to know...about our EPIC announcement!</title>
+    <dc:date>2018-02-20T22:48:37+00:00</dc:date>
+    <link>http://blog.opto22.com/optoblog/youre-the-first-to-know-about-our-epic-announcement</link>
+    <dc:creator>oriolrius</dc:creator><dc:subject>plc nodered hardware hw iot m2m node-red mqtt opc-ua opcua</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:oriolrius/b:f356af9878e3/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:oriolrius/t:plc"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:oriolrius/t:nodered"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:oriolrius/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:oriolrius/t:hw"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:oriolrius/t:iot"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:oriolrius/t:m2m"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:oriolrius/t:node-red"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:oriolrius/t:mqtt"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:oriolrius/t:opc-ua"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:oriolrius/t:opcua"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.thefuturewas8bit.com/index.php/divmmcfuture">
+    <title>divMMC Future for the ZX Spectrum</title>
+    <dc:date>2018-02-20T20:44:52+00:00</dc:date>
+    <link>https://www.thefuturewas8bit.com/index.php/divmmcfuture</link>
+    <dc:creator>driscoll</dc:creator><dc:subject>retrocomputing hardware microcomputer computing hack hacking pc spectrum</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:driscoll/b:4ad9f36a3866/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:driscoll/t:retrocomputing"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:driscoll/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:driscoll/t:microcomputer"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:driscoll/t:computing"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:driscoll/t:hack"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:driscoll/t:hacking"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:driscoll/t:pc"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:driscoll/t:spectrum"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://evoluent.com/">
+    <title>Evoluent VerticalMouse Vertical Mouse</title>
+    <dc:date>2018-02-20T17:40:17+00:00</dc:date>
+    <link>https://evoluent.com/</link>
+    <dc:creator>Chichibio</dc:creator><dc:subject>hardware computers</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:Chichibio/b:8a8372ef4845/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:Chichibio/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:Chichibio/t:computers"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://twitter.com/hashtag/plottertwitter">
+    <title>[untitled]</title>
+    <dc:date>2018-02-20T17:21:19+00:00</dc:date>
+    <link>https://twitter.com/hashtag/plottertwitter</link>
+    <dc:creator>madamim</dc:creator><description><![CDATA[what a hashtag! #plottertwitter (ht https://usesthis.com/interviews/bertrand.fan/)]]></description>
+<dc:subject>plotter hardware</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:madamim/b:0be99213a48f/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:madamim/t:plotter"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:madamim/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://iamdustan.com/2015/12/16/react-hardware/">
+    <title>React Hardware</title>
+    <dc:date>2018-02-20T16:58:31+00:00</dc:date>
+    <link>http://iamdustan.com/2015/12/16/react-hardware/</link>
+    <dc:creator>cyberchucktx</dc:creator><description><![CDATA[React is proving that its component-driven architecture and abstractions hold up beyond browser-based user interfaces. React Native is bringing React’s authoring and architectural style to iOS and Android. I’ve been writing a renderer for the Firmata protocol so that you can manipulate the real world with React.
+
+Firmata is a standard protocol based on the midi message format for communicating with microcontrollers from software running on a computer. ]]></description>
+<dc:subject>react hardware firmata embedded arduino</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:cyberchucktx/b:64c65023761b/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:react"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:firmata"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:embedded"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:arduino"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://github.com/nebrius/raspi">
+    <title>Base functionality for working with a Raspberry Pi from Node.js</title>
+    <dc:date>2018-02-20T16:45:07+00:00</dc:date>
+    <link>https://github.com/nebrius/raspi</link>
+    <dc:creator>cyberchucktx</dc:creator><description><![CDATA[This module, along with Raspi Board and Raspi Peripheral, provide support for various peripherals on the Raspberry Pi. These libraries form the basis for Raspi IO, an IO plugin that adds support for the Raspberry Pi to Johnny-Five.]]></description>
+<dc:subject>raspberrypi javascript hardware gpio nodejs</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:cyberchucktx/b:a0467bb48507/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:raspberrypi"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:javascript"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:gpio"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:nodejs"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.hackster.io/IainIsCreative/javascript-with-hardware-part-two-using-modern-javascript-c6f818">
+    <title>JavaScript with Hardware [Part Two]: Using Modern JavaScript - Hackster.io</title>
+    <dc:date>2018-02-20T16:38:29+00:00</dc:date>
+    <link>https://www.hackster.io/IainIsCreative/javascript-with-hardware-part-two-using-modern-javascript-c6f818</link>
+    <dc:creator>cyberchucktx</dc:creator><description><![CDATA[Today, we're going to start looking at using modern JavaScript syntax and features, as well making sure we write consistent code. This will allow us to use the latest features and make sure we're writing our code neatly and precisely! Documents various javascript utilities & tools such as ESLINT,  EDITORCONFIG, and BABEL ]]></description>
+<dc:subject>javascript hardware hackster.io tutorial lint babel</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:cyberchucktx/b:1f100beff7c0/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:javascript"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:hackster.io"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:tutorial"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:lint"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:babel"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.imore.com/how-watch-live-tv-your-apple-tv-without-cable">
+    <title>How to watch live broadcast TV on your Apple TV without cable | iMore</title>
+    <dc:date>2018-02-20T16:25:23+00:00</dc:date>
+    <link>https://www.imore.com/how-watch-live-tv-your-apple-tv-without-cable</link>
+    <dc:creator>adamschoales</dc:creator><description><![CDATA[Saving this for when i decide to cancel my cable subscription in a year.]]></description>
+<dc:subject>apple hardware how-to reference</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:adamschoales/b:f54a64a91940/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:adamschoales/t:apple"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:adamschoales/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:adamschoales/t:how-to"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:adamschoales/t:reference"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.theverge.com/circuitbreaker/2018/2/20/17031256/worlds-largest-ssd-drive-samsung-30-terabyte-pm1643">
+    <title>Samsung unveils world’s largest SSD with whopping 30TB of storage - The Verge</title>
+    <dc:date>2018-02-20T16:12:07+00:00</dc:date>
+    <link>https://www.theverge.com/circuitbreaker/2018/2/20/17031256/worlds-largest-ssd-drive-samsung-30-terabyte-pm1643</link>
+    <dc:creator>icco</dc:creator><dc:subject>hardware</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:icco/b:af6a2f8725be/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:icco/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://fibrevillage.com/sysadmin/240-how-to-identify-defective-dimm-from-edac-error-on-linux-2">
+    <title>How to identify defective DIMM from EDAC error on Linux - Fibrevillage</title>
+    <dc:date>2018-02-20T16:08:50+00:00</dc:date>
+    <link>http://fibrevillage.com/sysadmin/240-how-to-identify-defective-dimm-from-edac-error-on-linux-2</link>
+    <dc:creator>nxg</dc:creator><dc:subject>hardware edac dimm</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:nxg/b:caac933de830/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:nxg/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:nxg/t:edac"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:nxg/t:dimm"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.hackster.io/johnny-five/products/johnny-five">
+    <title>Johnny-Five projects page</title>
+    <dc:date>2018-02-20T16:03:58+00:00</dc:date>
+    <link>https://www.hackster.io/johnny-five/products/johnny-five</link>
+    <dc:creator>cyberchucktx</dc:creator><description><![CDATA[JavaScript Robotics & IoT Platform projects. ]]></description>
+<dc:subject>javscript hardware robotics arduino raspberrypi</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:cyberchucktx/b:8a5ebe2a5b88/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:javscript"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:robotics"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:arduino"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:cyberchucktx/t:raspberrypi"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://die-schwarzwald-werbeagentur.zazudesign.de/hardware/schneller-linux-fileserver-datenserver-im-eigenbau-teil-1-hardware.html">
+    <title>Schneller Linux Fileserver / Datenserver im Eigenbau – Teil 1 Hardware – zazudesign – die Schwarzwald Werbeagentur sagt …</title>
+    <dc:date>2018-02-20T15:32:19+00:00</dc:date>
+    <link>http://die-schwarzwald-werbeagentur.zazudesign.de/hardware/schneller-linux-fileserver-datenserver-im-eigenbau-teil-1-hardware.html</link>
+    <dc:creator>aexel</dc:creator><dc:subject>server diy files hardware</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:aexel/b:710730b34fdc/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:aexel/t:server"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:aexel/t:diy"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:aexel/t:files"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:aexel/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://github.com/w3c/device-memory">
+    <title>w3c/device-memory</title>
+    <dc:date>2018-02-20T15:20:11+00:00</dc:date>
+    <link>https://github.com/w3c/device-memory</link>
+    <dc:creator>johnloy</dc:creator><description><![CDATA[A “one-size-fits-all” web experience does not work in a world with widely varying device capabilities. Web apps that delight users on high end devices can be unusable on low end devices, particularly in emerging markets. To support a diverse web ecosystem that is inclusive of users on low end devices, apps need to be able to tailor their content to the device constraints. This allows users to consume content suited to their device, and ensures they have a good experience and fewer frustrations.]]></description>
+<dc:subject>web-standards hardware javascript error-handling *read</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:johnloy/b:fb8f3ed30935/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:johnloy/t:web-standards"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:johnloy/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:johnloy/t:javascript"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:johnloy/t:error-handling"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:johnloy/t:*read"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.marketwatch.com/story/this-chart-shows-the-modern-equivalent-of-bread-and-circuses-to-sate-the-masses-2018-02-12?link=sfmw_tw">
+    <title>Before you blame market volatility on inflation, check out this ‘stunning’ chart - MarketWatch</title>
+    <dc:date>2018-02-20T13:58:35+00:00</dc:date>
+    <link>https://www.marketwatch.com/story/this-chart-shows-the-modern-equivalent-of-bread-and-circuses-to-sate-the-masses-2018-02-12?link=sfmw_tw</link>
+    <dc:creator>dancall</dc:creator><description><![CDATA[To those pinning the recent spike in stock-market volatility on inflation and, specifically, higher wages, Barry Ritholtz of Ritholtz Wealth Management wants you to take a close look at this chart:]]></description>
+<dc:subject>stats health economics mobile technology hardware</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dancall/b:7a778712e4ea/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dancall/t:stats"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dancall/t:health"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dancall/t:economics"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dancall/t:mobile"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dancall/t:technology"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dancall/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.harvarddesignmagazine.org/issues/38/eyes-that-do-not-see-tracking-the-self-in-the-age-of-the-data-center">
+    <title>Harvard Design Magazine: Eyes That Do Not See: Tracking the Self in the Age of the Data Center</title>
+    <dc:date>2018-02-20T13:06:56+00:00</dc:date>
+    <link>http://www.harvarddesignmagazine.org/issues/38/eyes-that-do-not-see-tracking-the-self-in-the-age-of-the-data-center</link>
+    <dc:creator>janpeuker</dc:creator><description><![CDATA[Data Center as new Sublime - While data centers house both our public, if nonphysical, gathering spaces and our private refuges, their builders have little interest in treating these structures as works of architecture. Well aware that the average data center becomes obsolete in less than 10 years, developers care about keeping costs low, not about such structures’ physical appearance.]]></description>
+<dc:subject>urbanism networking hardware privacy</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:janpeuker/b:ddc325005aaf/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:janpeuker/t:urbanism"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:janpeuker/t:networking"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:janpeuker/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:janpeuker/t:privacy"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.sparkfun.com/products/14032">
+    <title>LIDAR-Lite v3 - SEN-14032 - SparkFun Electronics</title>
+    <dc:date>2018-02-20T12:42:03+00:00</dc:date>
+    <link>https://www.sparkfun.com/products/14032</link>
+    <dc:creator>jstenner</dc:creator><dc:subject>electronics hardware laser</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:jstenner/b:67d91ac4c347/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:jstenner/t:electronics"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:jstenner/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:jstenner/t:laser"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.reddit.com/r/SuggestALaptop/">
+    <title>r/SuggestALaptop/ - Get laptop suggestions from geeks that know</title>
+    <dc:date>2018-02-20T11:55:27+00:00</dc:date>
+    <link>https://www.reddit.com/r/SuggestALaptop/</link>
+    <dc:creator>kr4d</dc:creator><dc:subject>hardware community advice</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:kr4d/b:9b03af1ab366/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:kr4d/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:kr4d/t:community"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:kr4d/t:advice"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://flirc.tv/">
+    <title>flirc.tv - Your TV - PC Remote Companion</title>
+    <dc:date>2018-02-20T11:21:31+00:00</dc:date>
+    <link>https://flirc.tv/</link>
+    <dc:creator>bouvin</dc:creator><description><![CDATA[We don’t want to just make great media center products, we want to make great media center solutions. Which is why we’ve partnered with Logitech. Logitech has a number of custom flirc profiles that allow you to easily control your favorite media center hardware or favorite application. No flirc programming necessary, support is built in.
+
+LEARN MORE
+]]></description>
+<dc:subject>hardware raspberrypi remote</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:bouvin/b:89bd2639a05f/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:bouvin/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:bouvin/t:raspberrypi"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:bouvin/t:remote"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://twitter.com/i/web/status/965852075400794112">
+    <title>Twitter</title>
+    <dc:date>2018-02-20T07:34:14+00:00</dc:date>
+    <link>https://twitter.com/i/web/status/965852075400794112</link>
+    <dc:creator>vielmetti</dc:creator><description><![CDATA[Checking my @fosdem twitter stats, my #hardware tweets (@turris_cz, @thepine64 @RaptorCompSys) were the most popula… ]]></description>
+<dc:subject>hardware</dc:subject>
+<dc:source>http://twitter.com/</dc:source>
+<dc:identifier>http://pinboard.in/u:vielmetti/b:6a0ec5021b4b/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:vielmetti/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://variety.com/2018/biz/news/gibson-iconic-guitar-company-said-to-be-nearing-bankruptcy-1202704143/">
+    <title>Gibson, Iconic Guitar Company, Said to Be Nearing Bankruptcy</title>
+    <dc:date>2018-02-20T07:33:59+00:00</dc:date>
+    <link>http://variety.com/2018/biz/news/gibson-iconic-guitar-company-said-to-be-nearing-bankruptcy-1202704143/</link>
+    <dc:creator>0xroy</dc:creator><description><![CDATA[Gibson, une compagnie qui a fait des dons à l'extrême droite toute sa vie est à ça 👌 de la banqueroute.]]></description>
+<dc:subject>Musique Hardware 🤔</dc:subject>
+<dc:identifier>http://pinboard.in/u:0xroy/b:dd5cfa6a7847/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:0xroy/t:Musique"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:0xroy/t:Hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:0xroy/t:🤔"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.oreilly.com/learning/build-a-super-fast-deep-learning-machine-for-under-1000">
+    <title>Build a super fast deep learning machine for under $1,000</title>
+    <dc:date>2018-02-20T06:49:13+00:00</dc:date>
+    <link>https://www.oreilly.com/learning/build-a-super-fast-deep-learning-machine-for-under-1000</link>
+    <dc:creator>ttpro1995</dc:creator><dc:subject>deeplearning PC hardware</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:ttpro1995/b:3658aa19e469/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:ttpro1995/t:deeplearning"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:ttpro1995/t:PC"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:ttpro1995/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.youtube.com/watch?v=tx-9LkVIdz0">
+    <title>How iFixit Became the World's Best iPhone Teardown Team</title>
+    <dc:date>2018-02-20T00:36:36+00:00</dc:date>
+    <link>https://www.youtube.com/watch?v=tx-9LkVIdz0</link>
+    <dc:creator>0xroy</dc:creator><description><![CDATA[The most important thing that happens when a new iPhone comes out is not the release of the phone, but the disassembly of it. The iPhone teardown, undertaken by third-party teams around the world, provides a roadmap for the life of the iPhone X: Is it repairable? Who made the components inside it? The answers to these questions shift stock markets, electronics design, and consumer experience. 
+
+Every year there’s a race to become the first to tear down the phone, with teams from around the world flying to Australia—where it’s first released—to compete to be the first to look inside the world’s most coveted new phone. Motherboard embedded with iFixit, a California-based company whose primary mission is to make it easier for the average person to disassemble and repair their electronics, for its iPhone X teardown. 
+
+We went inside iFixit’s office, the “headquarters of the global repair movement, which features a tool laboratory and a parts library with thousands of electronics parts and disassembly tools. Then we went to Sydney, Australia, as iFixit tried to become the first team to tear down the iPhone X.]]></description>
+<dc:subject>DIY Apple Hardware Vidéo</dc:subject>
+<dc:identifier>http://pinboard.in/u:0xroy/b:0ac4c44d2155/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:0xroy/t:DIY"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:0xroy/t:Apple"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:0xroy/t:Hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:0xroy/t:Vidéo"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.cisco.com/c/en/us/products/collateral/switches/small-business-500-series-stackable-managed-switches/eos-eol-notice-c51-739827.html">
+    <title>End-of-Sale and End-of-Life Announcement for the Cisco 500 Series Stackable Managed Switches - Cisco</title>
+    <dc:date>2018-02-20T00:11:02+00:00</dc:date>
+    <link>https://www.cisco.com/c/en/us/products/collateral/switches/small-business-500-series-stackable-managed-switches/eos-eol-notice-c51-739827.html</link>
+    <dc:creator>natedoc</dc:creator><dc:subject>networking hardware</dc:subject>
+<dc:identifier>http://pinboard.in/u:natedoc/b:4c7d97e64551/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:natedoc/t:networking"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:natedoc/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.amazon.com/dp/B009F7TXMK/ref=psdc_160354011_t1_B01790511Q">
+    <title>Amazon.com: SISUN ® 2.5&quot;/3.5&quot; IDE SATA HDD Docking Station +Card Reader Hub (Black): Computers &amp; Accessories</title>
+    <dc:date>2018-02-19T21:48:09+00:00</dc:date>
+    <link>https://www.amazon.com/dp/B009F7TXMK/ref=psdc_160354011_t1_B01790511Q</link>
+    <dc:creator>gardencat</dc:creator><description><![CDATA[SISUN ® 2.5"/3.5" IDE SATA HDD Docking Station +Card Reader Hub (Black) ]]></description>
+<dc:subject>disk comp repair hardware</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:gardencat/b:dd0c409dc408/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:gardencat/t:disk"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:gardencat/t:comp"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:gardencat/t:repair"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:gardencat/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.amazon.com/External-Enclosure-3-5-Inch-Desktop-Drive/dp/B001UNPNQ2">
+    <title>Amazon.com: USB 2.0 External Enclosure for SATA or IDE 3.5-Inch Desktop Hard Drive HDD: Computers &amp; Accessories</title>
+    <dc:date>2018-02-19T21:35:15+00:00</dc:date>
+    <link>https://www.amazon.com/External-Enclosure-3-5-Inch-Desktop-Drive/dp/B001UNPNQ2</link>
+    <dc:creator>gardencat</dc:creator><description><![CDATA[USB 2.0 External Enclosure for SATA or IDE 3.5-Inch Desktop Hard Drive HDD ]]></description>
+<dc:subject>disk hardware repair comp</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:gardencat/b:a3621cce414f/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:gardencat/t:disk"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:gardencat/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:gardencat/t:repair"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:gardencat/t:comp"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.amazon.com/Magic-External-Aluminum-Drive-Enclosure/dp/B003OAH696">
+    <title>Amazon.com: I/O Magic External 3.5&quot; IDE/SATA USB 2.0 Aluminum Hard Drive Enclosure: Electronics</title>
+    <dc:date>2018-02-19T21:27:49+00:00</dc:date>
+    <link>https://www.amazon.com/Magic-External-Aluminum-Drive-Enclosure/dp/B003OAH696</link>
+    <dc:creator>gardencat</dc:creator><description><![CDATA[I/O Magic External 3.5" IDE/SATA USB 2.0 Aluminum Hard Drive Enclosure ]]></description>
+<dc:subject>comp hardware disk repair</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:gardencat/b:f35c145c887e/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:gardencat/t:comp"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:gardencat/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:gardencat/t:disk"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:gardencat/t:repair"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.nativeunion.com/drop-wireless-charger">
+    <title>DROP WIRELESS CHARGER - Made for iPhone and Qi Compatible Devices | NATIVE UNION</title>
+    <dc:date>2018-02-19T21:11:32+00:00</dc:date>
+    <link>https://www.nativeunion.com/drop-wireless-charger</link>
+    <dc:creator>benish</dc:creator><dc:subject>iphone shopping hardware</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:benish/b:4026cd7bf37d/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:benish/t:iphone"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:benish/t:shopping"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:benish/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.pinterest.com/r/pin/985231153281067/4766733815989148850/c66ba024e690744bf1cf53f462d91378a4af8109cd86bce185ec6a21c1e14ee3">
+    <title>Pinterest - 404</title>
+    <dc:date>2018-02-19T20:51:16+00:00</dc:date>
+    <link>https://www.pinterest.com/r/pin/985231153281067/4766733815989148850/c66ba024e690744bf1cf53f462d91378a4af8109cd86bce185ec6a21c1e14ee3</link>
+    <dc:creator>muhh</dc:creator><dc:subject>hardware projects</dc:subject>
+<dc:identifier>http://pinboard.in/u:muhh/b:94de988a1d62/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:muhh/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:muhh/t:projects"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.righto.com/2018/02/repairing-card-reader-for-1960s.html?m=1">
+    <title>Repairing the card reader for a 1960s mainframe: cams, relays and a clutch</title>
+    <dc:date>2018-02-19T17:12:22+00:00</dc:date>
+    <link>http://www.righto.com/2018/02/repairing-card-reader-for-1960s.html?m=1</link>
+    <dc:creator>drewish</dc:creator><dc:subject>hardware electronics computers 1960s</dc:subject>
+<dc:identifier>http://pinboard.in/u:drewish/b:1e2fc7f42d7d/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:drewish/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:drewish/t:electronics"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:drewish/t:computers"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:drewish/t:1960s"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://blog.initialstate.com/">
+    <title>Data Streaming Blog | Initial State</title>
+    <dc:date>2018-02-19T16:54:54+00:00</dc:date>
+    <link>http://blog.initialstate.com/</link>
+    <dc:creator>clarsen</dc:creator><dc:subject>blogs hardware iot</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:clarsen/b:2a949d9f9c54/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:clarsen/t:blogs"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:clarsen/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:clarsen/t:iot"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://ibuildmacs.com/products/macpro-2010-2011-12-core/">
+    <title>2010-2013 5,1 12-Core Mac Pro | iBuildMacs</title>
+    <dc:date>2018-02-19T15:52:15+00:00</dc:date>
+    <link>https://ibuildmacs.com/products/macpro-2010-2011-12-core/</link>
+    <dc:creator>emory</dc:creator><dc:subject>mac shopping hardware apple macpro</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:emory/b:7f160761cd25/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:emory/t:mac"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:emory/t:shopping"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:emory/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:emory/t:apple"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:emory/t:macpro"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.aholme.co.uk/GPS/Main.htm">
+    <title>Homemade GPS Receiver</title>
+    <dc:date>2018-02-19T10:12:44+00:00</dc:date>
+    <link>http://www.aholme.co.uk/GPS/Main.htm</link>
+    <dc:creator>apburgess</dc:creator><dc:subject>fpga hardware gps</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:apburgess/b:0bbf29fc2733/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:apburgess/t:fpga"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:apburgess/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:apburgess/t:gps"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://arduino-esp8266.readthedocs.io/en/latest/">
+    <title>Welcome to ESP8266 Arduino Core’s documentation! — ESP8266 Arduino Core 2.4.0 documentation</title>
+    <dc:date>2018-02-19T08:48:51+00:00</dc:date>
+    <link>https://arduino-esp8266.readthedocs.io/en/latest/</link>
+    <dc:creator>andym</dc:creator><dc:subject>platformio esp hardware</dc:subject>
+<dc:identifier>http://pinboard.in/u:andym/b:f0548682b093/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:andym/t:platformio"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:andym/t:esp"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:andym/t:hardware"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://m.habrahabr.ru/post/345584/">
+    <title>Время отклика компьютеров: 1977−2017 / Хабрахабр</title>
+    <dc:date>2018-02-19T08:09:32+00:00</dc:date>
+    <link>https://m.habrahabr.ru/post/345584/</link>
+    <dc:creator>liruoko</dc:creator><dc:subject>hardware history computers personality</dc:subject>
+<dc:identifier>http://pinboard.in/u:liruoko/b:3c7edc3a4542/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:liruoko/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:liruoko/t:history"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:liruoko/t:computers"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:liruoko/t:personality"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://github.com/randaller/cnn-rtlsdr">
+    <title>randaller/cnn-rtlsdr: Deep learning signal classification using rtl-sdr dongle</title>
+    <dc:date>2018-02-19T04:12:50+00:00</dc:date>
+    <link>https://github.com/randaller/cnn-rtlsdr</link>
+    <dc:creator>teeler</dc:creator><dc:subject>hardware programming learning sdr</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:teeler/b:71e28c9c8ac7/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:teeler/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:teeler/t:programming"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:teeler/t:learning"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:teeler/t:sdr"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://shop.mime.co.uk/collections/mearm">
+    <title>MeArm – Mime Industries</title>
+    <dc:date>2018-02-18T22:19:35+00:00</dc:date>
+    <link>https://shop.mime.co.uk/collections/mearm</link>
+    <dc:creator>teeler</dc:creator><dc:subject>hardware arm</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:teeler/b:8c54410e4d1f/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:teeler/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:teeler/t:arm"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://danluu.com/input-lag/">
+    <title>Computer latency: 1977-2017</title>
+    <dc:date>2018-02-18T20:37:01+00:00</dc:date>
+    <link>https://danluu.com/input-lag/</link>
+    <dc:creator>dentarg</dc:creator><dc:subject>history hardware latency performance computer wisdom</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:dentarg/b:c822921db47d/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:dentarg/t:history"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dentarg/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dentarg/t:latency"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dentarg/t:performance"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dentarg/t:computer"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:dentarg/t:wisdom"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://code.google.com/archive/p/rigkontrol3-linux-midicontroller/">
+    <title>Google Code Archive - Long-term storage for Google Code Project Hosting.</title>
+    <dc:date>2018-02-18T20:12:06+00:00</dc:date>
+    <link>https://code.google.com/archive/p/rigkontrol3-linux-midicontroller/</link>
+    <dc:creator>klokie</dc:creator><description><![CDATA[Linux support for the RigKontrol3 audio and MIDI input and output interfaces are provided by the snd-usb-caiaq ALSA kernel driver which currently sends button presses and pedal movements from the controller as Key Events. This utility, written in C, runs as a daemon to grab the input events (so they don't go anywhere else) and sends them as MIDI events thru an ALSA sequencer port. udev rules are included to make this 100% plug-n-play.
+
+]]></description>
+<dc:subject>audio midi hardware Linux</dc:subject>
+<dc:source>http://pinboard.in/</dc:source>
+<dc:identifier>http://pinboard.in/u:klokie/b:5c89936c1109/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="http://pinboard.in/u:klokie/t:audio"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:klokie/t:midi"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:klokie/t:hardware"/>
+	<rdf:li rdf:resource="http://pinboard.in/u:klokie/t:Linux"/>
+</rdf:Bag></taxo:topics>
+</item>
+</rdf:RDF>
