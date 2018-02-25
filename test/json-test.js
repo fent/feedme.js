@@ -9,6 +9,8 @@ const feed = {
   'type': 'json',
   'xmlns' : 'http://www.w3.org/2005/Atom',
   'xmlns$openSearch' : 'http://a9.com/-/spec/opensearchrss/1.0/',
+  'version': '1.0',
+  'encoding': 'UTF-8',
   'id' : 'tag:blogger.com,1999:blog-934829683866516411',
   'updated' : '2007-03-18T20:43:19.434+01:00',
   'title' : 'Beautiful Beta',
