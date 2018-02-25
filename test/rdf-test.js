@@ -5,7 +5,7 @@ const assert = require('assert');
 
 
 const file1 = path.join(__dirname, 'assets', 'rdf.xml');
-const feed1 = {
+const feed = {
   type: 'rss 1.0',
   title: 'Pinboard (items tagged hardware)',
   link: 'https://pinboard.in/t:hardware/',
@@ -14,40 +14,39 @@ const feed1 = {
 
 
 describe('Parse an RSS file with RDF schema', () => {
-  var parser = new FeedMe();
-  var events = 0;
-  var item = 0;
-
   it('Matches JSON object', (done) => {
+    var parser = new FeedMe();
+    var events = 0;
+    var items = 0;
+
     parser.on('type', (data) => {
-      assert.deepEqual(data, feed1.type);
+      assert.deepEqual(data, feed.type);
       events++;
     });
 
     parser.on('title', (data) => {
-      assert.equal(data, feed1.title);
+      assert.equal(data, feed.title);
       events++;
     });
 
     parser.on('link', (data) => {
-      assert.equal(data, feed1.link);
+      assert.equal(data, feed.link);
       events++;
     });
 
     parser.on('description', (data) => {
-      assert.equal(data, feed1.description);
+      assert.equal(data, feed.description);
       events++;
     });
 
     parser.on('item', () => {
-      item++;
-      events++;
+      items++;
     });
 
     fs.createReadStream(file1).pipe(parser);
     parser.on('end', () => {
-      assert.equal(events, 74);
-      assert.equal(item, 70);
+      assert.equal(events, 4);
+      assert.equal(items, 70);
       assert.deepEqual(parser.done(), undefined);
       done();
     });
@@ -60,13 +59,14 @@ describe('Parse an RSS file with RDF schema', () => {
       fs.createReadStream(file1).pipe(parser);
       parser.on('end', () => {
         var doc = parser.done();
-        assert.equal(doc.type, feed1.type);
-        assert.equal(doc.title, feed1.title);
-        assert.equal(doc.link, feed1.link);
-        assert.equal(doc.description, feed1.description);
+        assert.equal(doc.type, feed.type);
+        assert.equal(doc.title, feed.title);
+        assert.equal(doc.link, feed.link);
+        assert.equal(doc.description, feed.description);
         assert.equal(doc.items.length, 70);
         done();
       });
     });
   });
+
 });

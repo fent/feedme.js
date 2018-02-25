@@ -81,10 +81,10 @@ const feed = {
 
 
 describe('Parse an Atom file', () => {
-  var parser = new FeedMe();
-  var events = 0;
-
   it('Events emitted match expected', (done) => {
+    var parser = new FeedMe();
+    var events = 0;
+    var items = 0;
 
     parser.on('type', (data) => {
       assert.deepEqual(data, feed.type);
@@ -132,25 +132,25 @@ describe('Parse an Atom file', () => {
     });
 
     parser.on('item', (data) => {
-      assert.deepEqual(data.title, feed.items[0].title);
-      assert.deepEqual(data.link, feed.items[0].link);
-      assert.deepEqual(data.id, feed.items[0].id);
-      assert.deepEqual(data.updated, feed.items[0].updated);
-      assert.deepEqual(data.author, feed.items[0].author);
-      assert.deepEqual(data.contributor, feed.items[0].contributor);
-      assert.deepEqual(data.content, feed.items[0].content);
-      assert.deepEqual(data, feed.items[0]);
-      events++;
+      assert.deepEqual(data.title, feed.items[items].title);
+      assert.deepEqual(data.link, feed.items[items].link);
+      assert.deepEqual(data.id, feed.items[items].id);
+      assert.deepEqual(data.updated, feed.items[items].updated);
+      assert.deepEqual(data.author, feed.items[items].author);
+      assert.deepEqual(data.contributor, feed.items[items].contributor);
+      assert.deepEqual(data.content, feed.items[items].content);
+      assert.deepEqual(data, feed.items[items]);
+      items++;
     });
 
     fs.createReadStream(file).pipe(parser);
 
-    parser.on('end', done);
-  });
-
-  after(() => {
-    assert.equal(events, 10);
-    assert.deepEqual(parser.done(), undefined);
+    parser.on('end', () => {
+      assert.equal(events, 9);
+      assert.equal(items, 1);
+      assert.deepEqual(parser.done(), undefined);
+      done();
+    });
   });
 
   describe('with buffer on', () => {

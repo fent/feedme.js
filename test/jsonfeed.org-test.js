@@ -9,11 +9,10 @@ const feed = require(file);
 feed.type = 'json';
 
 describe('Parse a jsonfeed.org feed file', () => {
-  var parser = new FeedMe();
-  var events = 0;
-  var item = 0;
-
   it('Events emitted match expected', (done) => {
+    var parser = new FeedMe();
+    var events = 0;
+    var items = 0;
 
     parser.on('type', (data) => {
       assert.deepEqual(data, feed.type);
@@ -41,21 +40,21 @@ describe('Parse a jsonfeed.org feed file', () => {
     });
 
     parser.on('item', (data) => {
-      assert.deepEqual(data.title, feed.items[item].title);
-      assert.deepEqual(data.url, feed.items[item].url);
-      assert.deepEqual(data.id, feed.items[item].id);
-      assert.deepEqual(data.date_modified, feed.items[item].date_modified);
-      assert.deepEqual(data.author, feed.items[item].author);
-      assert.deepEqual(data.date_published, feed.items[item].date_published);
-      assert.deepEqual(data.content_html, feed.items[item].content_html);
-      assert.deepEqual(data, feed.items[item]);
-      item++;
+      assert.deepEqual(data.title, feed.items[items].title);
+      assert.deepEqual(data.url, feed.items[items].url);
+      assert.deepEqual(data.id, feed.items[items].id);
+      assert.deepEqual(data.date_modified, feed.items[items].date_modified);
+      assert.deepEqual(data.author, feed.items[items].author);
+      assert.deepEqual(data.date_published, feed.items[items].date_published);
+      assert.deepEqual(data.content_html, feed.items[items].content_html);
+      assert.deepEqual(data, feed.items[items]);
+      items++;
     });
 
     fs.createReadStream(file).pipe(parser);
     parser.on('end', () => {
       assert.equal(events, 4);
-      assert.equal(item, 48);
+      assert.equal(items, 48);
       assert.deepEqual(parser.done(), undefined);
       done();
     });
