@@ -19,7 +19,7 @@ http.get('http://www.npr.org/rss/rss.php?id=1001', (res) => {
     console.error(new Error(`status code ${res.statusCode}`));
     return;
   }
-  var parser = new FeedMe();
+  let parser = new FeedMe();
   parser.on('title', (title) => {
     console.log('title of feed is', title);
   });
@@ -49,7 +49,7 @@ const FeedMe = require('feedme');
 const http = require('http');
 
 http.get('https://nodejs.org/en/feed/blog.xml', (res) => {
-  var parser = new FeedMe(true);
+  let parser = new FeedMe(true);
   res.pipe(parser);
   parser.on('end', () => {
     console.log(parser.done());

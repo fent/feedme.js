@@ -6,8 +6,8 @@ const assert = require('assert');
 
 describe('Try parsing a non-feed file', () => {
   it('Parser gives an error', (done) => {
-    var file = path.join(__dirname, 'assets', 'notfeed.json');
-    var parser = new FeedMe();
+    const file = path.join(__dirname, 'assets', 'notfeed.json');
+    const parser = new FeedMe();
     parser.on('error', (err) => {
       assert.equal(err.message, 'Not a correctly formatted feed');
       done();
@@ -17,8 +17,8 @@ describe('Try parsing a non-feed file', () => {
 
   describe('That is disguised as an xml feed', () => {
     it('Parser gives an error', (done) => {
-      var file = path.join(__dirname, 'assets', 'notfeed.xml');
-      var parser = new FeedMe();
+      const file = path.join(__dirname, 'assets', 'notfeed.xml');
+      const parser = new FeedMe();
       parser.on('error', (err) => {
         assert.equal(err.message, 'Feed type not recognized');
         done();
@@ -30,8 +30,8 @@ describe('Try parsing a non-feed file', () => {
 
 describe('Parse a feed with no items', () => {
   it('Parser gives no items', (done) => {
-    var file = path.join(__dirname, 'assets', 'no-items.xml');
-    var parser = new FeedMe(true);
+    const file = path.join(__dirname, 'assets', 'no-items.xml');
+    const parser = new FeedMe(true);
     parser.on('end', () => {
       assert.equal(parser.done().items, 0);
       done();

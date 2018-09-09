@@ -74,9 +74,9 @@ const feed = {
 
 describe('Parse a JSON feed file', () => {
   it('Events emitted match expected', (done) => {
-    var parser = new FeedMe();
-    var events = 0;
-    var items = 0;
+    const parser = new FeedMe();
+    let events = 0;
+    let items = 0;
 
     parser.on('type', (data) => {
       assert.deepEqual(data, feed.type);
@@ -145,7 +145,7 @@ describe('Parse a JSON feed file', () => {
   });
 
   describe('with buffer on', () => {
-    var parser = new FeedMe(true);
+    const parser = new FeedMe(true);
 
     it('Returns matching Javascript object', (done) => {
       fs.createReadStream(file).pipe(parser);

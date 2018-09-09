@@ -8,7 +8,7 @@ const file = path.join(__dirname, 'assets', 'jsonfeed.json');
 describe('End a stream early', () => {
   describe('With data written', () => {
     it('Items are emitted', (done) => {
-      var parser = new FeedMe();
+      const parser = new FeedMe();
       parser.on('item', () => {
         done();
       });
@@ -21,7 +21,7 @@ describe('End a stream early', () => {
 
   describe('With nothing written', () => {
     it('Everything goes well', (done) => {
-      var parser = new FeedMe();
+      const parser = new FeedMe();
       parser.on('end', done);
       parser.on('item', () => {
         throw new Error('There should be no items');
