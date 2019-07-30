@@ -5,7 +5,7 @@ feedme.js is an RSS/Atom/JSON feed parser. How is this different from the other 
 
 [![Build Status](https://secure.travis-ci.org/fent/feedme.js.svg)](http://travis-ci.org/fent/feedme.js)
 [![Dependency Status](https://david-dm.org/fent/feedme.js.svg)](https://david-dm.org/fent/feedme.js)
-[![codecov](https://codecov.io/gh/fent/feedme.js/branch/master/graph/badge.svg)](https://codecov.io/gh/fent/feedme.js)
+[![codecov](https://codecov.io/gh/fent/feedme.js/branch/master/graph/badge.svg)](https://codecov.io/gh/fent/feedme.js) [![Greenkeeper badge](https://badges.greenkeeper.io/fent/feedme.js.svg)](https://greenkeeper.io/)
 
 
 # Usage
