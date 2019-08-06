@@ -1,6 +1,7 @@
 const FeedMe = require('..');
 const fs     = require('fs');
 const path   = require('path');
+const assert = require('assert');
 
 
 const file = path.join(__dirname, 'assets', 'jsonfeed.json');
@@ -13,7 +14,7 @@ describe('End a stream early', () => {
         done();
       });
       fs.readFile(file, (err, body) => {
-        if (err) return done(err);
+        assert.ifError(err);
         parser.end(body);
       });
     });
@@ -24,7 +25,7 @@ describe('End a stream early', () => {
       const parser = new FeedMe();
       parser.on('end', done);
       parser.on('item', () => {
-        throw new Error('There should be no items');
+        throw Error('There should be no items');
       });
       parser.end();
     });
