@@ -117,7 +117,7 @@ describe('Parse an RSS 2.0 file', () => {
     });
 
     fs.createReadStream(file1).pipe(parser);
-    parser.on('end', () => {
+    parser.on('finish', () => {
       assert.equal(events, 11);
       assert.equal(items, 4);
       assert.deepEqual(parser.done(), undefined);
@@ -131,7 +131,7 @@ describe('Parse an RSS 2.0 file', () => {
     it('Returns matching Javascript object', (done) => {
       fs.createReadStream(file1).pipe(parser);
 
-      parser.on('end', () => {
+      parser.on('finish', () => {
         assert.deepEqual(parser.done(), feed);
         done();
       });

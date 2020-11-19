@@ -44,7 +44,7 @@ describe('Parse an RSS file with RDF schema', () => {
     });
 
     fs.createReadStream(file1).pipe(parser);
-    parser.on('end', () => {
+    parser.on('finish', () => {
       assert.equal(events, 4);
       assert.equal(items, 70);
       assert.deepEqual(parser.done(), undefined);
@@ -57,7 +57,7 @@ describe('Parse an RSS file with RDF schema', () => {
 
     it('Returns matching Javascript object', (done) => {
       fs.createReadStream(file1).pipe(parser);
-      parser.on('end', () => {
+      parser.on('finish', () => {
         const doc = parser.done();
         assert.equal(doc.type, feed.type);
         assert.equal(doc.title, feed.title);

@@ -23,7 +23,7 @@ describe('End a stream early', () => {
   describe('With nothing written', () => {
     it('Everything goes well', (done) => {
       const parser = new FeedMe();
-      parser.on('end', done);
+      parser.on('finish', done);
       parser.on('item', () => {
         throw Error('There should be no items');
       });

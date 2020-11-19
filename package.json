@@ -26,7 +26,6 @@
   },
   "dependencies": {
     "clarinet": "^0.12.4",
-    "eventyoshi": "^1.0.0",
     "sax": "^1.2.4"
   },
   "devDependencies": {

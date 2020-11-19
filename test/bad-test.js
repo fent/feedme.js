@@ -32,7 +32,7 @@ describe('Parse a feed with no items', () => {
   it('Parser gives no items', (done) => {
     const file = path.join(__dirname, 'assets', 'no-items.xml');
     const parser = new FeedMe(true);
-    parser.on('end', () => {
+    parser.on('finish', () => {
       assert.equal(parser.done().items, 0);
       done();
     });

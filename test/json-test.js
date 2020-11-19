@@ -136,7 +136,7 @@ describe('Parse a JSON feed file', () => {
     });
 
     fs.createReadStream(file).pipe(parser);
-    parser.on('end', () => {
+    parser.on('finish', () => {
       assert.equal(events, 9);
       assert.equal(items, 1);
       assert.deepEqual(parser.done(), undefined);
@@ -150,7 +150,7 @@ describe('Parse a JSON feed file', () => {
     it('Returns matching Javascript object', (done) => {
       fs.createReadStream(file).pipe(parser);
 
-      parser.on('end', () => {
+      parser.on('finish', () => {
         assert.deepEqual(parser.done(), feed);
         done();
       });
