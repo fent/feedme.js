@@ -39,3 +39,15 @@ describe('Parse a feed with no items', () => {
     fs.createReadStream(file).pipe(parser);
   });
 });
+
+describe('Parse a badly formatted feed', () => {
+  it('Parser gives an error', (done) => {
+    const file = path.join(__dirname, 'assets', 'badfeed.xml');
+    const parser = new FeedMe();
+    parser.on('error', (err) => {
+      assert.ok(/Unexpected end/.test(err.message), `Error message: ${err.message}`);
+      done();
+    });
+    fs.createReadStream(file).pipe(parser);
+  });
+});
