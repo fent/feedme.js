@@ -1,7 +1,7 @@
-const FeedMe = require('..');
-const fs     = require('fs');
-const path   = require('path');
-const assert = require('assert');
+import FeedMe from '..';
+import fs     from 'fs';
+import path   from 'path';
+import assert from 'assert';
 
 
 const file = path.join(__dirname, 'assets', 'jsonfeed.json');
@@ -129,7 +129,6 @@ describe('Parse a JSON feed file', () => {
       assert.deepEqual(data.id, feed.items[items].id);
       assert.deepEqual(data.updated, feed.items[items].updated);
       assert.deepEqual(data.author, feed.items[items].author);
-      assert.deepEqual(data.contributor, feed.items[items].contributor);
       assert.deepEqual(data.content, feed.items[items].content);
       assert.deepEqual(data, feed.items[items]);
       items++;

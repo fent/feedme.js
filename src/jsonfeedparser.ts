@@ -1,5 +1,19 @@
-const { Writable } = require('stream');
-const clarinet = require('clarinet');
+import { Writable } from 'stream';
+import { default as clarinet } from 'clarinet';
+import { Parser, Feed } from './parser';
+
+
+type JSONValue = string | boolean | null;
+type JSONObject = {
+  [key: string]: JSONValue | JSONObject | JSONObject[];
+}
+type JSONArray = JSONObject[];
+type JSONAny = JSONObject | JSONArray;
+type JSONRoot = JSONObject & {
+  type: string;
+  items: JSONObject[];
+}
+
 
 /**
  * Gets rid of unnecessary keys in an object
@@ -10,7 +24,7 @@ const clarinet = require('clarinet');
  * @param {Object}
  * @returns {Object}
  */
-const cleanObject = (obj) => {
+const cleanObject = (obj: JSONObject) => {
   if (obj.$t !== undefined) {
     let keysLength = Object.keys(obj).length;
     if (keysLength === 1 || (keysLength === 2 && obj.type !== undefined)) {
@@ -29,14 +43,23 @@ const cleanObject = (obj) => {
  * Parses a JSON feed.
  *
  * @param {boolean} buffer If true, will buffer entire object.
- * @return {clarinet.Stream}
+ * @return {CStream}
  */
-module.exports = class JSONFeedParser extends Writable {
-  constructor(buffer) {
+export default class JSONFeedParser extends Writable implements Parser {
+  _buffer: boolean;
+  parser: Writable;
+  private _currObj: JSONAny;
+  private _currKey: string | number;
+
+  constructor(buffer: boolean) {
     super();
     this._buffer = buffer;
-    const parser = this.parser = clarinet.createStream();
-    const stack = [];
+    const parser = this.parser = clarinet.createStream() as unknown as Writable;
+    const stack: {
+      obj: JSONAny;
+      key: string | number;
+      arr: boolean;
+    }[] = [];
     this._currObj = {};
     this._currKey = 'feed';
     let inArray = false;
@@ -44,7 +67,7 @@ module.exports = class JSONFeedParser extends Writable {
 
     // Look feed object in case this is a json encoded atom feed.
     // Place these underlying keys onto the root object.
-    const findfeed = (key) => {
+    const findfeed = (key: string) => {
       if (key === 'feed') {
         feedJustFound = true;
         parser.removeListener('openobject', findfeed);
@@ -52,25 +75,25 @@ module.exports = class JSONFeedParser extends Writable {
       }
     };
 
-    const onvalue = (value) => {
+    const onvalue = (value: JSONValue) => {
       feedJustFound = false;
-      this._currObj[this._currKey] = value;
+      (this._currObj as JSONObject)[this._currKey] = value;
       if (stack.length === 1) {
-        parser.emit(this._currKey, value);
-        if (!buffer) { delete this._currObj[this._currKey]; }
+        parser.emit(this._currKey as string, value);
+        if (!buffer) { delete (this._currObj as JSONObject)[this._currKey as string]; }
       }
       if (inArray) {
-        this._currKey++;
+        (this._currKey as number)++;
       }
     };
 
-    const onopenobject = (key) => {
+    const onopenobject = (key: string) => {
       if (feedJustFound) {
         feedJustFound = false;
         this._currKey = key;
         return;
       }
-      let obj = this._currObj[this._currKey] = {};
+      let obj = (this._currObj as JSONObject)[this._currKey] = {};
       stack.push({
         obj: this._currObj,
         key: this._currKey,
@@ -81,7 +104,7 @@ module.exports = class JSONFeedParser extends Writable {
       inArray = false;
     };
 
-    const onkey = (key) => { this._currKey = key; };
+    const onkey = (key: string) => { this._currKey = key; };
 
     const oncloseobject = () => {
       let parent = stack.pop();
@@ -91,31 +114,33 @@ module.exports = class JSONFeedParser extends Writable {
       inArray = parent.arr;
 
       // Clean object.
-      this._currObj[this._currKey] = cleanObject(this._currObj[this._currKey]);
+      const currObj = this._currObj as JSONObject;
+      currObj[this._currKey] = cleanObject(currObj[this._currKey] as JSONObject);
 
       // Emit key in feed if curr is parent.
       if (stack.length === 1) {
-        parser.emit(this._currKey, this._currObj[this._currKey]);
-        if (!buffer) { delete this._currObj[this._currKey]; }
+        parser.emit(`${this._currKey}`, currObj[this._currKey]);
+        if (!buffer) { delete currObj[this._currKey]; }
 
         // Or parent is array.
       } else if (inArray) {
+        const currArr = currObj as unknown as JSONArray;
         if (stack.length === 2) {
           let key = stack[1].key;
           let event = key === 'entry' || key === 'items' ?
-            'item' : stack[1].key;
-          let data = this._currObj[this._currKey];
+            'item' : stack[1].key as string;
+          let data = currArr[this._currKey as number];
           parser.emit(event, data);
-          if (!buffer) { this._currObj.splice(this._currKey, 1); }
+          if (!buffer) { currArr.splice(this._currKey as number, 1); }
         }
 
-        if (stack.length > 2 || buffer) { this._currKey++; }
+        if (stack.length > 2 || buffer) { (this._currKey as number)++; }
       }
     };
 
     const onopenarray = () => {
       feedJustFound = false;
-      let obj = this._currObj[this._currKey] = [];
+      let obj: JSONAny = (this._currObj as JSONObject)[this._currKey] = [];
       stack.push({
         obj: this._currObj,
         key: this._currKey,
@@ -133,9 +158,9 @@ module.exports = class JSONFeedParser extends Writable {
       inArray = parent.arr;
 
       if (stack.length === 1) {
-        if (!buffer) { delete this._currObj[this._currKey]; }
+        if (!buffer) { delete (this._currObj as JSONObject)[this._currKey]; }
       } else if (inArray) {
-        this._currKey++;
+        (this._currKey as number)++;
       }
     };
 
@@ -149,24 +174,24 @@ module.exports = class JSONFeedParser extends Writable {
     parser.on('closearray', onclosearray);
   }
 
-  _write(chunk, encoding, callback) {
+  _write(chunk: Buffer, encoding: BufferEncoding, callback: (err?: Error) => void) {
     this.parser.write(chunk, encoding);
     callback(null);
   }
 
-  _final(callback) {
+  _final(callback: (err?: Error) => void) {
     this.parser.end();
     callback(null);
   }
 
   done() {
     if (!this._buffer) { return; }
-    let root = this._currObj[this._currKey];
+    let root = (this._currObj as JSONObject)[this._currKey] as JSONRoot;
     root.type = 'json';
     if (Array.isArray(root.entry)) {
       root.items = root.entry;
     }
     delete root.entry;
-    return root;
+    return root as Feed;
   }
-};
+}

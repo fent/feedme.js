@@ -1,9 +1,13 @@
-const { Writable } = require('stream');
-const XMLFeedParser  = require('./xmlfeedparser');
-const JSONFeedParser = require('./jsonfeedparser');
+import { Writable } from 'stream';
+import { Parser } from './parser';
+import XMLFeedParser from './xmlfeedparser';
+import JSONFeedParser from './jsonfeedparser';
 
 
-module.exports = class FeedMe extends Writable {
+class FeedMeClass extends Writable {
+  private _buffer: boolean;
+  private _parser: Parser;
+
   /**
    * Creates an instance of a parser. Parser can be JSON/XML.
    *
@@ -11,7 +15,7 @@ module.exports = class FeedMe extends Writable {
    *   and can be retrieved using `parser.done()` on the `end` event.
    * @constructor
    */
-  constructor(buffer) {
+  constructor(buffer = false) {
     super();
     this._buffer = buffer;
     this._parser = null;
@@ -19,11 +23,12 @@ module.exports = class FeedMe extends Writable {
 
   _proxyEvents() {
     const parserEmit = this._parser.parser.emit;
-    this._parser.parser.emit = (event, value) => {
-      parserEmit.call(this._parser.parser, event, value);
+    this._parser.parser.emit = (event: string | symbol, ...args: any[]): boolean => {
+      parserEmit.apply(this._parser.parser, [event, ...args]);
       if (event !== 'error') {
-        this.emit(event, value);
+        return this.emit(event, ...args);
       }
+      return true;
     };
     this._parser.parser.on('error', this.emit.bind(this, 'error'));
   }
@@ -31,7 +36,7 @@ module.exports = class FeedMe extends Writable {
   /**
    * @param {Buffer} data
    */
-  _write(data, encoding, callback) {
+  _write(data: Buffer, encoding: BufferEncoding, callback: (err?: Error) => void) {
     const str = data.toString();
 
     // First find out what type of feed this is.
@@ -54,7 +59,7 @@ module.exports = class FeedMe extends Writable {
     this._parser.write(data, encoding, callback);
   }
 
-  _final(callback) {
+  _final(callback: (err?: Error) => void) {
     if (this._parser) {
       this._parser.end(callback);
     } else {
@@ -65,4 +70,9 @@ module.exports = class FeedMe extends Writable {
   done() {
     return this._parser.done();
   }
-};
+}
+
+
+export const FeedMe = FeedMeClass;
+export default FeedMe;
+module.exports = FeedMe;

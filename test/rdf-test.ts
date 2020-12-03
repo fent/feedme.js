@@ -1,7 +1,7 @@
-const FeedMe = require('..');
-const fs     = require('fs');
-const path   = require('path');
-const assert = require('assert');
+import FeedMe from '..';
+import fs     from 'fs';
+import path   from 'path';
+import assert from 'assert';
 
 
 const file1 = path.join(__dirname, 'assets', 'rdf.xml');
