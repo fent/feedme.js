@@ -4,7 +4,7 @@ import XMLFeedParser from './xmlfeedparser';
 import JSONFeedParser from './jsonfeedparser';
 
 
-class FeedMeClass extends Writable {
+export default class FeedMe extends Writable {
   private _buffer: boolean;
   private _parser: Parser;
 
@@ -18,7 +18,6 @@ class FeedMeClass extends Writable {
   constructor(buffer = false) {
     super();
     this._buffer = buffer;
-    this._parser = null;
   }
 
   _proxyEvents() {
@@ -36,7 +35,7 @@ class FeedMeClass extends Writable {
   /**
    * @param {Buffer} data
    */
-  _write(data: Buffer, encoding: BufferEncoding, callback: (err?: Error) => void) {
+  _write(data: Buffer, encoding: BufferEncoding, callback: (err?: Error | null) => void) {
     const str = data.toString();
 
     // First find out what type of feed this is.
@@ -59,7 +58,7 @@ class FeedMeClass extends Writable {
     this._parser.write(data, encoding, callback);
   }
 
-  _final(callback: (err?: Error) => void) {
+  _final(callback: (err?: Error | null) => void) {
     if (this._parser) {
       this._parser.end(callback);
     } else {
@@ -73,6 +72,5 @@ class FeedMeClass extends Writable {
 }
 
 
-export const FeedMe = FeedMeClass;
-export default FeedMe;
+export { Feed, FeedItem, FeedObject } from './parser';
 module.exports = FeedMe;

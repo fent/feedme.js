@@ -55,11 +55,12 @@ export default class JSONFeedParser extends Writable implements Parser {
     super();
     this._buffer = buffer;
     const parser = this.parser = clarinet.createStream() as unknown as Writable;
-    const stack: {
+    type StackItem = {
       obj: JSONAny;
       key: string | number;
       arr: boolean;
-    }[] = [];
+    }
+    const stack: StackItem[] = [];
     this._currObj = {};
     this._currKey = 'feed';
     let inArray = false;
@@ -152,7 +153,7 @@ export default class JSONFeedParser extends Writable implements Parser {
     };
 
     const onclosearray = () => {
-      let parent = stack.pop();
+      let parent = stack.pop() as StackItem;
       this._currObj = parent.obj;
       this._currKey = parent.key;
       inArray = parent.arr;
@@ -174,12 +175,12 @@ export default class JSONFeedParser extends Writable implements Parser {
     parser.on('closearray', onclosearray);
   }
 
-  _write(chunk: Buffer, encoding: BufferEncoding, callback: (err?: Error) => void) {
+  _write(chunk: Buffer, encoding: BufferEncoding, callback: (err?: Error | null) => void) {
     this.parser.write(chunk, encoding);
     callback(null);
   }
 
-  _final(callback: (err?: Error) => void) {
+  _final(callback: (err?: Error | null) => void) {
     this.parser.end();
     callback(null);
   }

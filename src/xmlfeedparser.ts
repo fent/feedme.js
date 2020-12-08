@@ -5,7 +5,7 @@ import { Parser, Feed } from './parser';
 
 type XMLAttribute = {
   text?: string;
-  [key: string]: string | QualifiedAttribute;
+  [key: string]: string | QualifiedAttribute | undefined;
 };
 type XMLObject = string | XMLAttribute | {
   [key: string]: string | XMLObject | XMLObject[];
@@ -18,7 +18,7 @@ type XMLRoot = {
   text?: string;
   item?: XMLObject | XMLObject[];
   entry?: XMLObject | XMLObject[];
-  [key: string]: string | XMLObject | XMLObject[] | XMLAny;
+  [key: string]: string | XMLObject | XMLObject[] | XMLAny | undefined;
 }
 
 
@@ -110,7 +110,7 @@ export default class XMLFeedParser extends Writable implements Parser {
     const stack: {
       obj: XMLObject;
       key: string;
-      i: number;
+      i?: number;
     }[] = [];
     this._root = this._obj = {};
 
@@ -192,12 +192,12 @@ export default class XMLFeedParser extends Writable implements Parser {
     };
   }
 
-  _write(chunk: Buffer, encoding: BufferEncoding, callback: (err?: Error) => void) {
+  _write(chunk: Buffer, encoding: BufferEncoding, callback: (err?: Error | null) => void) {
     this.parser.write(chunk, encoding);
     callback(null);
   }
 
-  _final(callback: (err?: Error) => void) {
+  _final(callback: (err?: Error | null) => void) {
     this.parser.end();
     callback(null);
   }

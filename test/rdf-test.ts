@@ -1,4 +1,4 @@
-import FeedMe from '..';
+import { default as FeedMe, Feed } from '..';
 import fs     from 'fs';
 import path   from 'path';
 import assert from 'assert';
@@ -53,12 +53,11 @@ describe('Parse an RSS file with RDF schema', () => {
   });
 
   describe('with buffer on', () => {
-    const parser = new FeedMe(true);
-
     it('Returns matching Javascript object', (done) => {
+      const parser = new FeedMe(true);
       fs.createReadStream(file1).pipe(parser);
       parser.on('finish', () => {
-        const doc = parser.done();
+        const doc = parser.done() as Feed;
         assert.equal(doc.type, feed.type);
         assert.equal(doc.title, feed.title);
         assert.equal(doc.link, feed.link);

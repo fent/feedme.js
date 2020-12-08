@@ -1,7 +1,7 @@
 import { Writable } from 'stream';
 
 
-export type FeedObject = {
+export type FeedObject = string | {
   [key: string]: string | boolean | null | FeedObject | FeedObject[];
 }
 export type FeedItem = {
@@ -10,11 +10,11 @@ export type FeedItem = {
 export type Feed = {
   type: string;
   items: FeedItem[];
-  [key: string]: string | FeedObject | FeedObject[];
+  [key: string]: FeedObject | FeedObject[];
 }
 
 export interface Parser extends Writable {
   _buffer: boolean;
   parser: Writable;
-  done(): Feed;
+  done(): Feed | undefined;
 }

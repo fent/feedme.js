@@ -33,7 +33,7 @@ describe('Parse a feed with no items', () => {
     const file = path.join(__dirname, 'assets', 'no-items.xml');
     const parser = new FeedMe(true);
     parser.on('finish', () => {
-      assert.equal(parser.done().items, 0);
+      assert.equal(parser.done()?.items, 0);
       done();
     });
     fs.createReadStream(file).pipe(parser);
