@@ -11,9 +11,9 @@ feedme.js is an RSS/Atom/JSON feed parser. How is this different from the other 
 
 ```js
 const FeedMe = require('feedme');
-const http = require('http');
+const https = require('https');
 
-http.get('http://www.npr.org/rss/rss.php?id=1001', (res) => {
+https.get('https://feeds.npr.org/1001/rss.xml', (res) => {
   if (res.statusCode != 200) {
     console.error(new Error(`status code ${res.statusCode}`));
     return;
