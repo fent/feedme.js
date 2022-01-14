@@ -28,7 +28,7 @@
     "test:unit": "mocha --require ts-node/register test/*-test.ts"
   },
   "dependencies": {
-    "clarinet": "^0.12.4",
+    "clarinet": "^0.12.5",
     "sax": "^1.2.4"
   },
   "devDependencies": {
