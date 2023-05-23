@@ -1,5 +1,5 @@
 {
-  "name": "feedme",
+  "name": "feedme-modern",
   "description": "RSS/Atom/JSON feed parser",
   "keywords": [
     "feed",
@@ -11,11 +11,12 @@
   "version": "2.0.2",
   "repository": {
     "type": "git",
-    "url": "git://github.com/fent/feedme.js.git"
+    "url": "git://github.com/demosjarco/feedme.js.git"
   },
-  "author": "fent <fentbox@gmail.com> (https://github.com/fent)",
+  "author": "DemosJarco <1209494+demosjarco@users.noreply.github.com> (https://github.com/demosjarco)",
   "contributors": [
-    "Lucas Stadler"
+    "Lucas Stadler",
+	"fent"
   ],
   "main": "./dist/feedme.js",
   "files": [
@@ -42,7 +43,7 @@
     "typescript": "^4.1.2"
   },
   "engines": {
-    "node": ">=12.20.0"
+    "node": ">=16.0.0"
   },
   "license": "MIT"
 }
