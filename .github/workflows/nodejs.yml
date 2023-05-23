@@ -25,6 +25,7 @@ jobs:
         npm run build --if-present
         npm test
 
-    - uses: codecov/codecov-action@v1.0.3
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
+    # Disable codecov for now
+    # - uses: codecov/codecov-action@v1.0.3
+    #   with:
+    #     token: ${{ secrets.CODECOV_TOKEN }}
