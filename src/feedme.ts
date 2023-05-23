@@ -1,4 +1,4 @@
-import { Writable } from 'stream';
+import { Writable } from 'node:stream';
 import { Parser } from './parser';
 import XMLFeedParser from './xmlfeedparser';
 import JSONFeedParser from './jsonfeedparser';

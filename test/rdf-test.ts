@@ -1,5 +1,5 @@
 import { default as FeedMe, Feed } from '..';
-import fs     from 'fs';
+import fs     from 'node:fs';
 import path   from 'path';
 import assert from 'assert';
 
