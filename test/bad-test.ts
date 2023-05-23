@@ -1,7 +1,7 @@
 import FeedMe from '..';
-import fs     from 'fs';
-import path   from 'path';
-import assert from 'assert';
+import fs     from 'node:fs';
+import path   from 'node:path';
+import assert from 'node:assert';
 
 
 describe('Try parsing a non-feed file', () => {
