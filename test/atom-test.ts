@@ -1,7 +1,7 @@
 import FeedMe from '..';
 import fs     from 'node:fs';
-import path   from 'path';
-import assert from 'assert';
+import path   from 'node:path';
+import assert from 'node:assert';
 
 
 const file = path.join(__dirname, 'assets', 'atom.xml');
