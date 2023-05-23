@@ -8,7 +8,7 @@
     "json",
     "parser"
   ],
-  "version": "2.0.2",
+  "version": "2.1.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/demosjarco/feedme.js.git"
@@ -16,7 +16,7 @@
   "author": "DemosJarco <1209494+demosjarco@users.noreply.github.com> (https://github.com/demosjarco)",
   "contributors": [
     "Lucas Stadler",
-	"fent"
+    "fent"
   ],
   "main": "./dist/feedme.js",
   "files": [
