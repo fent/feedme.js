@@ -13,6 +13,11 @@ jobs:
         os: [ubuntu-latest]
 
     steps:
+    - uses: step-security/harden-runner@v2
+      with:
+        disable-sudo: true
+        egress-policy: audit
+
     - uses: actions/checkout@v3
 
     - name: Use Node.js ${{ matrix.node-version }}
