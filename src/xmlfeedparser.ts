@@ -1,4 +1,4 @@
-import { Writable } from 'stream';
+import { Writable } from 'node:stream';
 import { default as sax, Tag, QualifiedTag, QualifiedAttribute } from 'sax';
 import { Parser, Feed } from './parser';
 
