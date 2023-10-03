@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "clarinet": "^0.12.4",
-    "sax": "^1.2.4"
+    "sax": "^1.3.0"
   },
   "devDependencies": {
     "@types/clarinet": "^0.12.0",
