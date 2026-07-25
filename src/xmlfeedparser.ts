@@ -23,14 +23,16 @@ type XMLRoot = {
 
 
 /**
- * If this object has text, and there is no other children,
- * or the only other key is type, make the object the text.
+ * Convert simple XML elements into text values. Elements with no content
+ * become an empty string, including typed empty text elements such as
+ * `<summary type="text"></summary>`.
  *
  * @param {Object} obj
  * @returns {Object}
  */
 const cleanObj = (obj: XMLAttribute) => {
-  let keys = Object.keys(obj).length;
+  const keys = Object.keys(obj).length;
+  const hasOnlyTypeAttribute = keys === 1 && obj.type != null;
   if (obj.text != null) {
     // If this tag has text, trim it.
     obj.text = trimIndent(obj.text);
@@ -38,7 +40,7 @@ const cleanObj = (obj: XMLAttribute) => {
     if (keys === 1 || (keys === 2 && obj.type != null)) {
       return obj.text;
     }
-  } else if (keys === 0) {
+  } else if (keys === 0 || hasOnlyTypeAttribute) {
     return '';
   }
   return obj;

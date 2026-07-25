@@ -166,3 +166,32 @@ describe('Parse an Atom file', () => {
   });
 
 });
+
+describe('Parse empty Atom text elements', () => {
+  it('emits an empty string for a typed empty summary', (done) => {
+    const parser = new FeedMe();
+    let summary: unknown;
+    const xml = `<?xml version="1.0"?>
+      <feed xmlns="http://www.w3.org/2005/Atom">
+        <title>Test feed</title>
+        <id>urn:test</id>
+        <updated>2026-07-25T00:00:00Z</updated>
+        <entry>
+          <title>Empty summary</title>
+          <id>urn:empty</id>
+          <updated>2026-07-25T00:00:00Z</updated>
+          <summary type="text"></summary>
+        </entry>
+      </feed>`;
+
+    parser.on('item', (item) => {
+      summary = item.summary;
+    });
+    parser.on('finish', () => {
+      assert.equal(summary, '');
+      done();
+    });
+
+    parser.end(xml);
+  });
+});
