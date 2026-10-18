@@ -3,7 +3,8 @@
 
 feedme.js is an RSS/Atom/JSON feed parser. How is this different from the other few feed parsers? It uses [sax-js](https://github.com/isaacs/sax-js) for xml parsing and [clarinet](https://github.com/dscape/clarinet) for json parsing. That means it is coded in pure Javascript and thus more deployable. I needed a parser that wouldn't require me to install external dependencies or to compile anything.
 
-![Depfu](https://img.shields.io/depfu/fent/feedme.js)
+[![npm](https://img.shields.io/npm/v/feedme)](https://www.npmjs.com/package/feedme)
+[![Node.js CI](https://github.com/fent/feedme.js/actions/workflows/nodejs.yml/badge.svg)](https://github.com/fent/feedme.js/actions/workflows/nodejs.yml)
 [![codecov](https://codecov.io/gh/fent/feedme.js/branch/master/graph/badge.svg)](https://codecov.io/gh/fent/feedme.js)
 
 
