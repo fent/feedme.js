@@ -1,8 +1,7 @@
-import FeedMe from '..';
-import fs     from 'fs';
-import path   from 'path';
 import assert from 'assert';
-
+import fs from 'fs';
+import path from 'path';
+import FeedMe from '..';
 
 const file1 = path.join(__dirname, 'assets', 'rss2.xml');
 const feed = {
@@ -17,33 +16,38 @@ const feed = {
   generator: 'Weblog Editor 2.0',
   managingeditor: 'editor@example.com',
   webmaster: 'webmaster@example.com',
-  items:  [
+  items: [
     {
       title: 'Star City',
       link: 'http://liftoff.msfc.nasa.gov/news/2003/news-starcity.asp',
-      description: 'How do Americans get ready to work with Russians aboard the International Space Station? They take a crash course in culture, language and protocol at Russia\'s <a href="http://howe.iki.rssi.ru/GCTC/gctc_e.htm">Star City</a>.',
+      description:
+        'How do Americans get ready to work with Russians aboard the International Space Station? They take a crash course in culture, language and protocol at Russia\'s <a href="http://howe.iki.rssi.ru/GCTC/gctc_e.htm">Star City</a>.',
       pubdate: 'Tue, 03 Jun 2003 09:39:21 GMT',
-      guid: 'http://liftoff.msfc.nasa.gov/2003/06/03.html#item573'
+      guid: 'http://liftoff.msfc.nasa.gov/2003/06/03.html#item573',
     },
     {
-      description: 'Sky watchers in Europe, Asia, and parts of Alaska and Canada will experience a <a href="http://science.nasa.gov/headlines/y2003/30may_solareclipse.htm">partial eclipse of the Sun</a> on Saturday, May 31st.',
+      description:
+        'Sky watchers in Europe, Asia, and parts of Alaska and Canada will experience a <a href="http://science.nasa.gov/headlines/y2003/30may_solareclipse.htm">partial eclipse of the Sun</a> on Saturday, May 31st.',
       pubdate: 'Fri, 30 May 2003 11:06:42 GMT',
-      guid: 'http://liftoff.msfc.nasa.gov/2003/05/30.html#item572'    },
+      guid: 'http://liftoff.msfc.nasa.gov/2003/05/30.html#item572',
+    },
     {
       title: 'The Engine That Does More',
       link: 'http://liftoff.msfc.nasa.gov/news/2003/news-VASIMR.asp',
-      description: 'Before man travels to Mars, NASA hopes to design new engines that will let us fly through the Solar System more quickly.  The proposed VASIMR engine would do that.',
+      description:
+        'Before man travels to Mars, NASA hopes to design new engines that will let us fly through the Solar System more quickly.  The proposed VASIMR engine would do that.',
       pubdate: 'Tue, 27 May 2003 08:37:32 GMT',
-      guid: 'http://liftoff.msfc.nasa.gov/2003/05/27.html#item571'    },
+      guid: 'http://liftoff.msfc.nasa.gov/2003/05/27.html#item571',
+    },
     {
-      title: 'Astronauts\' Dirty Laundry',
+      title: "Astronauts' Dirty Laundry",
       link: 'http://liftoff.msfc.nasa.gov/news/2003/news-laundry.asp',
       description: '',
       pubdate: 'Tue, 20 May 2003 08:56:02 GMT',
-      guid: 'http://liftoff.msfc.nasa.gov/2003/05/20.html#item570'    }
-  ]
+      guid: 'http://liftoff.msfc.nasa.gov/2003/05/20.html#item570',
+    },
+  ],
 };
-
 
 describe('Parse an RSS 2.0 file', () => {
   it('Matches JSON object', (done) => {
@@ -137,5 +141,4 @@ describe('Parse an RSS 2.0 file', () => {
       });
     });
   });
-
 });

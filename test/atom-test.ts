@@ -1,8 +1,7 @@
-import FeedMe from '..';
-import fs     from 'fs';
-import path   from 'path';
 import assert from 'assert';
-
+import fs from 'fs';
+import path from 'path';
+import FeedMe from '..';
 
 const file = path.join(__dirname, 'assets', 'atom.xml');
 const feed = {
@@ -16,19 +15,19 @@ const feed = {
       rel: 'alternate',
       type: 'text/html',
       hreflang: 'en',
-      href: 'http://example.org/'
+      href: 'http://example.org/',
     },
     {
       rel: 'self',
       type: 'application/atom+xml',
-      href: 'http://example.org/feed.atom'
-    }
+      href: 'http://example.org/feed.atom',
+    },
   ],
   rights: 'Copyright (c) 2003, Mark Pilgrim',
   generator: {
     uri: 'http://www.example.com/',
     version: '1.0',
-    text: 'Example Toolkit'
+    text: 'Example Toolkit',
   },
   items: [
     {
@@ -37,14 +36,14 @@ const feed = {
         {
           rel: 'alternate',
           type: 'text/html',
-          href: 'http://example.org/2005/04/02/atom'
+          href: 'http://example.org/2005/04/02/atom',
         },
         {
           rel: 'enclosure',
           type: 'audio/mpeg',
           length: '1337',
-          href: 'http://example.org/audio/ph34r_my_podcast.mp3'
-        }
+          href: 'http://example.org/audio/ph34r_my_podcast.mp3',
+        },
       ],
       id: 'tag:example.org,2003:3.2397',
       updated: '2005-07-31T12:29:29Z',
@@ -52,16 +51,16 @@ const feed = {
       author: {
         name: 'Mark Pilgrim',
         uri: 'http://example.org/',
-        email: 'f8dy@example.com'
+        email: 'f8dy@example.com',
       },
       contributor: [
         {
           name: 'Sam Ruby',
-          desc: '\n        Bad\n       indents\n      '
+          desc: '\n        Bad\n       indents\n      ',
         },
         {
           name: 'Joe Gregorio',
-          desc: 'A bad\n        indent\n      '
+          desc: 'A bad\n        indent\n      ',
         },
       ],
       content: {
@@ -71,14 +70,13 @@ const feed = {
         div: {
           xmlns: 'http://www.w3.org/1999/xhtml',
           p: {
-            i: '[Update: The Atom draft is finished.]'
-          }
-        }
-      }
-    }
-  ]
+            i: '[Update: The Atom draft is finished.]',
+          },
+        },
+      },
+    },
+  ],
 };
-
 
 describe('Parse an Atom file', () => {
   it('Events emitted match expected', (done) => {
@@ -164,7 +162,6 @@ describe('Parse an Atom file', () => {
       });
     });
   });
-
 });
 
 describe('Parse empty Atom text elements', () => {

@@ -1,8 +1,7 @@
-import FeedMe from '..';
-import fs     from 'fs';
-import path   from 'path';
 import assert from 'assert';
-
+import fs from 'fs';
+import path from 'path';
+import FeedMe from '..';
 
 const file = path.join(__dirname, 'assets', 'jsonfeed.json');
 

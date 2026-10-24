@@ -1,8 +1,7 @@
-import FeedMe from '..';
-import fs     from 'fs';
-import path   from 'path';
 import assert from 'assert';
-
+import fs from 'fs';
+import path from 'path';
+import FeedMe from '..';
 
 const file = path.join(__dirname, 'assets', 'jsonfeed.org.json');
 const feed = require(file);
@@ -71,5 +70,4 @@ describe('Parse a jsonfeed.org feed file', () => {
       });
     });
   });
-
 });

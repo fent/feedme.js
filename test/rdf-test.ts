@@ -1,8 +1,7 @@
-import { default as FeedMe, Feed } from '..';
-import fs     from 'fs';
-import path   from 'path';
 import assert from 'assert';
-
+import fs from 'fs';
+import path from 'path';
+import { type Feed, default as FeedMe } from '..';
 
 const file1 = path.join(__dirname, 'assets', 'rdf.xml');
 const feed = {
@@ -11,7 +10,6 @@ const feed = {
   link: 'https://pinboard.in/t:hardware/',
   description: '',
 };
-
 
 describe('Parse an RSS file with RDF schema', () => {
   it('Matches JSON object', (done) => {
@@ -67,5 +65,4 @@ describe('Parse an RSS file with RDF schema', () => {
       });
     });
   });
-
 });

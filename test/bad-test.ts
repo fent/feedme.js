@@ -1,8 +1,7 @@
-import FeedMe from '..';
-import fs     from 'fs';
-import path   from 'path';
 import assert from 'assert';
-
+import fs from 'fs';
+import path from 'path';
+import FeedMe from '..';
 
 describe('Try parsing a non-feed file', () => {
   it('Parser gives an error', (done) => {
@@ -45,7 +44,10 @@ describe('Parse a badly formatted feed', () => {
     const file = path.join(__dirname, 'assets', 'badfeed.xml');
     const parser = new FeedMe();
     parser.on('error', (err) => {
-      assert.ok(/Unexpected end/.test(err.message), `Error message: ${err.message}`);
+      assert.ok(
+        /Unexpected end/.test(err.message),
+        `Error message: ${err.message}`,
+      );
       done();
     });
     fs.createReadStream(file).pipe(parser);
