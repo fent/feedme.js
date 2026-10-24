@@ -22,6 +22,8 @@
     "dist"
   ],
   "scripts": {
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
     "prepare": "tsc -p tsconfig.build.json",
     "build": "tsc -p tsconfig.build.json",
     "test": "nyc --extension .ts --reporter=lcov --reporter=text-summary npm run test:unit",
@@ -32,14 +34,15 @@
     "sax": "^1.2.4"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.5.15",
     "@types/clarinet": "^0.12.0",
-    "@types/mocha": "^8.0.4",
-    "@types/node": "^14.14.10",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.1.2",
     "@types/sax": "^1.2.1",
     "mocha": "^12.0.3",
     "nyc": "^18.0.0",
-    "ts-node": "^9.0.0",
-    "typescript": "^4.1.2"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
   },
   "engines": {
     "node": ">=10"
