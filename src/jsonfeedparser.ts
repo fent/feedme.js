@@ -1,5 +1,5 @@
+import { Writable } from 'node:stream';
 import { default as clarinet } from 'clarinet';
-import { Writable } from 'stream';
 import type { Feed, Parser } from './parser';
 
 type JSONValue = string | boolean | null;

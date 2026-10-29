@@ -1,4 +1,4 @@
-import { Writable } from 'stream';
+import { Writable } from 'node:stream';
 import JSONFeedParser from './jsonfeedparser';
 import type { Parser } from './parser';
 import XMLFeedParser from './xmlfeedparser';
@@ -23,7 +23,7 @@ export default class FeedMe extends Writable {
     const parserEmit = this._parser.parser.emit;
     this._parser.parser.emit = (
       event: string | symbol,
-      ...args: any[]
+      ...args: unknown[]
     ): boolean => {
       parserEmit.apply(this._parser.parser, [event, ...args]);
       if (event !== 'error') {

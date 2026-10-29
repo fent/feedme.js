@@ -1,10 +1,10 @@
+import { Writable } from 'node:stream';
 import {
   type QualifiedAttribute,
   type QualifiedTag,
   default as sax,
   type Tag,
 } from 'sax';
-import { Writable } from 'stream';
 import type { Feed, Parser } from './parser';
 
 type XMLAttribute = {
@@ -137,7 +137,7 @@ export default class XMLFeedParser extends Writable implements Parser {
         parser.on('opentag', onopentag);
         parser.on('closetag', onclosetag);
       } else if (node.name === 'rss' || node.name === 'rdf:rdf') {
-        const type = 'rss ' + (node.attributes.version || '1.0');
+        const type = `rss ${node.attributes.version || '1.0'}`;
         this._root.type = type;
         parser.emit('type', type);
       } else {
