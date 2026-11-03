@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zero-shelter judgement</title>
+<style>:root {
+  color-scheme: light;
+  --paper: oklch(98.6% 0.004 85);
+  --sheet: oklch(100% 0 0);
+  --ink: oklch(24% 0.012 75);
+  --ink-soft: oklch(48% 0.012 75);
+  --ink-faint: oklch(56.5% 0.010 75);
+  --rule: oklch(89% 0.008 75);
+  --rule-strong: oklch(72% 0.010 75);
+  --accent: oklch(52% 0.126 62);
+  --accent-soft: oklch(94% 0.036 70);
+  --mark: oklch(38% 0.020 75);
+}
+body:has(#dark:checked) {
+  color-scheme: dark;
+  --paper: oklch(17% 0.008 75);
+  --sheet: oklch(20.5% 0.009 75);
+  --ink: oklch(92% 0.008 80);
+  --ink-soft: oklch(74% 0.010 80);
+  --ink-faint: oklch(60% 0.010 80);
+  --rule: oklch(31% 0.010 75);
+  --rule-strong: oklch(45% 0.012 75);
+  --accent: oklch(78% 0.122 68);
+  --accent-soft: oklch(29% 0.040 68);
+  --mark: oklch(80% 0.014 80);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --paper: oklch(17% 0.008 75);
+    --sheet: oklch(20.5% 0.009 75);
+    --ink: oklch(92% 0.008 80);
+    --ink-soft: oklch(74% 0.010 80);
+    --ink-faint: oklch(60% 0.010 80);
+    --rule: oklch(31% 0.010 75);
+    --rule-strong: oklch(45% 0.012 75);
+    --accent: oklch(78% 0.122 68);
+    --accent-soft: oklch(29% 0.040 68);
+    --mark: oklch(80% 0.014 80);
+  }
+  body:has(#dark:checked) {
+    color-scheme: light;
+    --paper: oklch(98.6% 0.004 85);
+    --sheet: oklch(100% 0 0);
+    --ink: oklch(24% 0.012 75);
+    --ink-soft: oklch(48% 0.012 75);
+    --ink-faint: oklch(56.5% 0.010 75);
+    --rule: oklch(89% 0.008 75);
+    --rule-strong: oklch(72% 0.010 75);
+    --accent: oklch(52% 0.126 62);
+    --accent-soft: oklch(94% 0.036 70);
+    --mark: oklch(38% 0.020 75);
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 15px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Noto Sans KR", sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+code, pre, .num, .count-value { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+.theme-input { position: absolute; opacity: 0; pointer-events: none; }
+.sheet {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 40px 28px 96px;
+  background: var(--sheet);
+  border-inline: 1px solid var(--rule);
+  min-height: 100vh;
+}
+@media (max-width: 720px) { .sheet { padding: 28px 18px 64px; border: 0; } }
+
+.top { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
+h1 { margin: 0; font-size: 30px; font-weight: 620; letter-spacing: -0.015em; }
+.sub { margin: 6px 0 0; color: var(--ink-soft); max-width: 62ch; }
+h2 { font-size: 13px; font-weight: 640; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-faint); margin: 0 0 10px; }
+
+.theme {
+  display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  font-size: 12px; color: var(--ink-soft); border: 1px solid var(--rule);
+  padding: 6px 11px; border-radius: 999px; white-space: nowrap;
+  transition: border-color 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.theme:hover { border-color: var(--rule-strong); }
+.theme .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--ink-faint); }
+body:has(#dark:checked) .theme .dot { background: var(--accent); }
+.theme-input:focus-visible + .sheet .theme { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.counts { display: flex; flex-wrap: wrap; gap: 30px; margin: 30px 0 0; padding-block: 18px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.count { display: flex; flex-direction: column; gap: 2px; }
+.count-value { font-size: 21px; font-weight: 560; color: var(--ink-soft); }
+.count--lead .count-value { font-size: 34px; font-weight: 620; color: var(--ink); letter-spacing: -0.02em; }
+.count-label { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); }
+
+.warning { border-inline-start: 3px solid var(--accent); padding-inline-start: 14px; margin: 20px 0 0; }
+.warning p { margin: 0; color: var(--ink); font-size: 14px; }
+.notes { margin: 18px 0 0; padding: 0; list-style: none; }
+.notes li { color: var(--ink-soft); font-size: 13px; padding-inline-start: 16px; position: relative; margin-block: 5px; }
+.notes li::before { content: "·"; position: absolute; inset-inline-start: 4px; color: var(--ink-faint); }
+
+.verdict { margin: 34px 0 0; font-size: 19px; max-width: 62ch; }
+
+.how { margin: 0 0 14px; color: var(--ink-soft); font-size: 13px; max-width: 74ch; }
+.glossary { margin-top: 14px; }
+.glossary dl { margin: 10px 0 0; display: grid; gap: 8px; }
+.term { display: grid; grid-template-columns: 152px minmax(0, 1fr); gap: 14px; font-size: 13px; }
+.term dt { color: var(--ink); }
+.term dd { margin: 0; color: var(--ink-soft); }
+@media (max-width: 700px) { .term { grid-template-columns: 1fr; gap: 2px; } }
+
+.prompts { margin-top: 34px; max-width: 82ch; }
+.prompt-list { list-style: none; margin: 0; padding: 0; }
+.prompt { display: flex; align-items: flex-start; gap: 18px; padding: 13px 0; border-bottom: 1px solid var(--rule); }
+.prompt p { margin: 0; flex: 1; max-width: 68ch; font-size: 13.5px; color: var(--ink); }
+.prompt .copy { flex: none; margin-top: 1px; }
+
+.act { margin-top: 42px; }
+.commands { list-style: none; margin: 0; padding: 0; }
+.command { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; padding: 11px 16px 11px 0; border-bottom: 1px solid var(--rule); }
+.command code { font-size: 16px; color: var(--ink); }
+.command--lead { padding-inline: 16px; background: var(--accent-soft); border-bottom-color: transparent; margin-bottom: 4px; }
+.command--lead code { font-size: 19px; font-weight: 560; letter-spacing: -0.01em; }
+.clears { font-size: 12px; color: var(--ink-soft); }
+.command--lead .clears { color: var(--accent); font-weight: 560; }
+.copy {
+  margin-inline-start: auto; font: inherit; font-size: 12px; color: var(--ink-soft);
+  background: transparent; border: 1px solid var(--rule-strong); border-radius: 4px;
+  padding: 4px 10px; cursor: pointer;
+  transition: color 180ms cubic-bezier(0.22, 1, 0.36, 1), border-color 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.copy:hover { color: var(--ink); border-color: var(--ink-soft); }
+.copy:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.caveat { margin: 10px 0 0; font-size: 13px; color: var(--ink-soft); max-width: 74ch; }
+.quiet { color: var(--ink-soft); }
+
+.indirect { margin-top: 34px; max-width: 78ch; }
+.indirect p { margin: 0 0 8px; }
+.snippet { margin: 10px 0 0; padding: 14px 16px; background: var(--paper); border: 1px solid var(--rule); overflow-x: auto; font-size: 13px; line-height: 1.5; }
+
+.ledger { margin-top: 48px; }
+.headrow, .row > summary {
+  display: grid;
+  grid-template-columns: 92px 168px minmax(0, 1fr) 104px 56px 148px;
+  gap: 16px;
+  align-items: baseline;
+}
+.headrow { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); padding-bottom: 8px; border-bottom: 1px solid var(--rule-strong); }
+.row { border-bottom: 1px solid var(--rule); font-size: 14px; }
+.row > summary { padding: 10px 0; cursor: pointer; list-style: none; }
+.row > summary::-webkit-details-marker { display: none; }
+.row > summary:hover { background: var(--paper); }
+.row > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.c-sev { white-space: nowrap; }
+.sev-word { display: block; font-size: 12px; color: var(--ink-soft); margin-top: 4px; }
+.meter { display: inline-flex; gap: 2px; }
+.meter i { display: inline-block; width: 6px; height: 13px; background: var(--rule-strong); }
+.meter i.on { background: var(--mark); }
+/* Rank is already carried by how many blocks are filled. Colour marks one
+   thing only: the row that is worst. Tinting high as well turned the whole
+   column amber, which is both alarm design and far past a restrained palette. */
+.sev--critical .meter i.on { background: var(--accent); }
+.c-pkg code { font-size: 14px; }
+.c-pkg.repeat code { color: var(--ink-faint); }
+.tag { display: block; font-size: 11px; color: var(--ink-faint); margin-top: 3px; }
+.c-adv code { font-size: 12px; color: var(--ink-soft); }
+.title { display: block; margin-top: 3px; }
+.c-fix code { font-size: 13px; }
+.c-fix .quiet { display: block; font-size: 11px; }
+.c-num { text-align: end; font-variant-numeric: tabular-nums; }
+.c-src code { font-size: 11px; color: var(--ink-soft); }
+.row .reasons { margin: 0 0 14px; padding-inline-start: 108px; }
+@media (max-width: 900px) {
+  .headrow { display: none; }
+  .row > summary { grid-template-columns: 92px minmax(0, 1fr) 56px; row-gap: 6px; }
+  .c-fix, .c-src { grid-column: 2 / -1; }
+  .row .reasons { padding-inline-start: 0; }
+}
+
+details summary { cursor: pointer; font-size: 12px; color: var(--ink-faint); padding: 2px 0; }
+details summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+details[open] summary { color: var(--ink-soft); }
+.reasons, .weights ul { list-style: none; margin: 8px 0 12px; padding: 0; font-size: 13px; }
+.reasons li, .weights li { display: flex; gap: 12px; padding: 2px 0; color: var(--ink-soft); }
+.reasons .num, .weights .num { min-width: 34px; text-align: end; color: var(--ink); }
+.weights { margin-top: 18px; }
+
+.history { margin-top: 44px; max-width: 78ch; }
+.runs { list-style: none; margin: 0; padding: 0; }
+.run { display: grid; grid-template-columns: 92px minmax(0, 1fr) 44px 72px; gap: 14px; align-items: center; padding: 5px 0; font-size: 13px; }
+.when { color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.bar { background: var(--paper); height: 14px; border: 1px solid var(--rule); }
+.bar > span { display: block; height: 100%; background: var(--mark); }
+.run:last-child .bar > span { background: var(--accent); }
+.run-count { text-align: end; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.run-delta { display: flex; gap: 8px; font-size: 12px; }
+.delta.up { color: var(--ink); }
+.delta.down { color: var(--ink-faint); }
+.small { font-size: 12px; margin-top: 12px; }
+
+.quiet-block { margin-top: 40px; max-width: 74ch; }
+.quiet-block p { margin: 0 0 6px; color: var(--ink-soft); }
+
+.bottom { margin-top: 64px; padding-top: 26px; border-top: 1px solid var(--rule); max-width: 78ch; }
+.stamp { margin: 12px 0 0; font-size: 12px; color: var(--ink-faint); }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }</style>
+</head>
+<body>
+<input type="checkbox" id="dark" class="theme-input">
+<main class="sheet">
+<header class="top">
+<div class="titles">
+<h1>Dependency judgement</h1>
+<p class="sub">What to fix now, and what was left out on purpose.</p>
+</div>
+<label class="theme" for="dark"><span class="dot"></span>Dark</label>
+</header>
+<div class="counts"><div class="count"><span class="count-value">2</span><span class="count-label">reported</span></div><div class="count"><span class="count-value">2</span><span class="count-label">after merge</span></div><div class="count count--lead"><span class="count-value">2</span><span class="count-label">outstanding</span></div></div>
+<details class="glossary"><summary>What the numbers mean</summary><dl><div class="term"><dt>reported</dt><dd>Findings the scanners handed over, before anything was reconciled.</dd></div><div class="term"><dt>after merge</dt><dd>What is left once findings that describe the same vulnerability under different names are joined.</dd></div><div class="term"><dt>outstanding</dt><dd>Merged findings that are not recorded in the baseline. This is the number that matters.</dd></div><div class="term"><dt>already accepted</dt><dd>Recorded in .zero-shelter/baseline.json and deliberately not listed. Accepting is a decision about risk, not a way to make output quiet.</dd></div><div class="term"><dt>no longer reported</dt><dd>Accepted findings that produced nothing this run. Not the same as fixed: a finding also disappears when the scanner that found it did not run.</dd></div><div class="term"><dt>severity</dt><dd>Five blocks for critical, one for info. The blocks carry the rank so it survives without colour.</dd></div><div class="term"><dt>direct / indirect</dt><dd>Direct means this project declares the package. Indirect means it arrives through something else, and `npm i` will not fix it.</dd></div><div class="term"><dt>score</dt><dd>Our ranking, not a CVSS number. Every point comes from the weights table under the ledger, and you can argue with a row.</dd></div></dl></details>
+<section class="act"><h2>Run this</h2><p class="quiet">No published fix applies to a direct dependency yet.</p></section>
+<section class="prompts">
+<h2>Or hand it to an agent</h2>
+<p class="how">Copy one of these into a coding agent. Each ends by re-judging, so the claim gets checked rather than assumed.</p>
+<ul class="prompt-list"><li class="prompt"><p>These have no published fix: minimatch, glob. For each, check whether the vulnerable code path is reachable from this project&#39;s own code, and say plainly when you cannot tell.</p><button class="copy" type="button" data-copy="These have no published fix: minimatch, glob. For each, check whether the vulnerable code path is reachable from this project&#39;s own code, and say plainly when you cannot tell." data-copied="Copied" data-select="Selected — press ctrl-C">Copy</button></li></ul>
+</section>
+
+<section class="ledger">
+<h2>Every finding</h2>
+<p class="how">Worst first. Open a row to see how its score was reached, which identifiers it was merged from, and what it might duplicate.</p>
+<div class="headrow">
+<span>Severity</span>
+<span>Package</span>
+<span>Advisory</span>
+<span>Fixed in</span>
+<span class="c-num">Score</span>
+<span>Reported by</span>
+</div>
+<details class="row sev--moderate"><summary><span class="c-sev"><span class="meter" role="img" aria-label="Rank 3/5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="sev-word">moderate</span></span><span class="c-pkg"><code>minimatch</code><span class="tag">indirect</span></span><span class="c-adv"><code>GHSA-G3HV-75WG-M249</code><span class="title">minimatch has potential denial of service via globparts amplification</span></span><span class="c-fix"><code>—</code><span class="quiet">none published</span></span><span class="c-num">65</span><span class="c-src"><code>npm-audit</code></span></summary><ul class="reasons"><li><span class="num">40</span>severity: moderate</li><li><span class="num">25</span>fix available</li><li><span class="num"></span>Affected range: <code>&lt;11.0.1</code></li><li><span class="num"></span>Also known as: <code>GHSA-G3HV-75WG-M249</code> <code>NPM-1244012</code></li></ul></details><details class="row sev--moderate"><summary><span class="c-sev"><span class="meter" role="img" aria-label="Rank 3/5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="sev-word">moderate</span></span><span class="c-pkg"><code>glob</code><span class="tag">indirect</span></span><span class="c-adv"><code>GHSA-3G3M-2FJR-6PW4</code><span class="title">Glob: AbortSignal cancellation bypass allows post-timeout filesystem traversal</span></span><span class="c-fix"><code>—</code><span class="quiet">none published</span></span><span class="c-num">65</span><span class="c-src"><code>npm-audit</code></span></summary><ul class="reasons"><li><span class="num">40</span>severity: moderate</li><li><span class="num">25</span>fix available</li><li><span class="num"></span>Affected range: <code>&gt;=9.0.0 &lt;=14.0.1</code></li><li><span class="num"></span>Also known as: <code>GHSA-3G3M-2FJR-6PW4</code> <code>NPM-1244013</code></li></ul></details>
+<details class="weights"><summary>weights</summary><ul><li><span class="num">100</span>severity: critical</li><li><span class="num">70</span>severity: high</li><li><span class="num">40</span>severity: moderate</li><li><span class="num">15</span>severity: low</li><li><span class="num">5</span>severity: info</li><li><span class="num">20</span>direct dependency</li><li><span class="num">25</span>fix available</li><li><span class="num">10</span>each extra tool that agrees</li><li><span class="num">5</span>has an unjoined sibling</li></ul></details>
+</section>
+<footer class="bottom">
+<h2>Reproducing this</h2>
+<p class="quiet">This page was written by:</p>
+<pre class="snippet"><code>zero-shelter judge --input npm-audit.json --format html --output report.html</code></pre>
+<p class="quiet">The same judgement and the same recorded runs produce a byte-identical page. Nothing here is read from a clock while rendering; the dates above come from the history file.</p>
+</footer>
+</main>
+<script>
+document.querySelectorAll(".copy").forEach(function (button) {
+  button.addEventListener("click", function () {
+    var text = button.getAttribute("data-copy");
+    var done = function () {
+      var label = button.textContent;
+      button.textContent = button.getAttribute("data-copied");
+      setTimeout(function () { button.textContent = label; }, 1200);
+    };
+
+    var legacy = function () {
+      var field = document.createElement("textarea");
+      field.value = text;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.opacity = "0";
+      document.body.appendChild(field);
+      field.select();
+      var copied = false;
+      try { copied = document.execCommand("copy"); } catch (error) { copied = false; }
+      document.body.removeChild(field);
+      if (copied) { done(); return; }
+
+      var source = button.previousElementSibling || button.parentElement;
+      var range = document.createRange();
+      range.selectNodeContents(source);
+      var selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      button.textContent = button.getAttribute("data-select");
+    };
+
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(done, legacy);
+    } else {
+      legacy();
+    }
+  });
+});
+</script>
+</body>
+</html>
