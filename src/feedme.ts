@@ -1,11 +1,14 @@
 import { Writable } from 'node:stream';
 import JSONFeedParser from './jsonfeedparser';
-import type { Parser } from './parser';
+import type * as parser from './parser';
 import XMLFeedParser from './xmlfeedparser';
 
-export default class FeedMe extends Writable {
+class FeedMe extends Writable {
+  static FeedMe = FeedMe;
+  static default = FeedMe;
+
   private _buffer: boolean;
-  private _parser: Parser;
+  private _parser: parser.Parser;
 
   /**
    * Creates an instance of a parser. Parser can be JSON/XML.
@@ -71,6 +74,16 @@ export default class FeedMe extends Writable {
   }
 }
 
-export { Feed, FeedItem, FeedObject } from './parser';
+namespace FeedMe {
+  export type Feed = parser.Feed;
+  export type FeedItem = parser.FeedItem;
+  export type FeedObject = parser.FeedObject;
+  export type Parser = parser.Parser;
+}
 
+// Statically recognizable exports for Node.js cjs-module-lexer (ESM named import support)
 module.exports = FeedMe;
+module.exports.default = FeedMe;
+module.exports.FeedMe = FeedMe;
+
+export = FeedMe;
