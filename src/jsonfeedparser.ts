@@ -18,9 +18,6 @@ type JSONRoot = JSONObject & {
  * and if the only keys in an object are `$t` or `$t` and `type`
  * it makes the whole object the value of `$t`
  * otherwise it renames `$t` to `text` for consistency.
- *
- * @param {Object}
- * @returns {Object}
  */
 const cleanObject = (obj: JSONObject) => {
   if (obj.$t !== undefined) {
@@ -39,8 +36,7 @@ const cleanObject = (obj: JSONObject) => {
 /**
  * Parses a JSON feed.
  *
- * @param {boolean} buffer If true, will buffer entire object.
- * @return {CStream}
+ * @param buffer If true, will buffer entire object.
  */
 export default class JSONFeedParser extends Writable implements Parser {
   _buffer: boolean;

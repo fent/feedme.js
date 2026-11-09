@@ -32,9 +32,6 @@ type XMLRoot = {
  * Convert simple XML elements into text values. Elements with no content
  * become an empty string, including typed empty text elements such as
  * `<summary type="text"></summary>`.
- *
- * @param {Object} obj
- * @returns {Object}
  */
 const cleanObj = (obj: XMLAttribute) => {
   const keys = Object.keys(obj).length;
@@ -60,9 +57,6 @@ const cleanObj = (obj: XMLAttribute) => {
  *       The big brown fox
  *       jumped over the lazy dog
  *     </item>
- *
- * @param {string} str
- * @returns {string}
  */
 const trimIndent = (str: string) => {
   const split = str.split('\n');
@@ -102,8 +96,7 @@ const trimIndent = (str: string) => {
 /**
  * Parses an RSS/Atom feed.
  *
- * @param {boolean} buffer If true, will buffer entire object.
- * @return {sax.Stream}
+ * @param buffer If true, will buffer entire object.
  */
 export default class XMLFeedParser extends Writable implements Parser {
   _buffer: boolean;

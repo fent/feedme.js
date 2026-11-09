@@ -10,9 +10,8 @@ export default class FeedMe extends Writable {
   /**
    * Creates an instance of a parser. Parser can be JSON/XML.
    *
-   * @param {boolean} buffer If true, feed will be buffered into memory
+   * @param buffer If true, feed will be buffered into memory
    *   and can be retrieved using `parser.done()` on the `end` event.
-   * @constructor
    */
   constructor(buffer = false) {
     super();
@@ -34,9 +33,6 @@ export default class FeedMe extends Writable {
     this._parser.parser.on('error', this.emit.bind(this, 'error'));
   }
 
-  /**
-   * @param {Buffer} data
-   */
   _write(
     data: Buffer,
     encoding: BufferEncoding,
