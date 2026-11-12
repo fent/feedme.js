@@ -1,7 +1,7 @@
 import assert from 'node:assert';
 import fs from 'node:fs';
 import path from 'node:path';
-import { type Feed, default as FeedMe } from '..';
+import { type Feed, default as FeedMe } from '../src/feedme';
 
 const file1 = path.join(__dirname, 'assets', 'rdf.xml');
 const feed = {

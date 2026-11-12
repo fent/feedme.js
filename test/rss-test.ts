@@ -1,7 +1,7 @@
 import assert from 'node:assert';
 import fs from 'node:fs';
 import path from 'node:path';
-import FeedMe from '..';
+import FeedMe from '../src/feedme';
 
 const file1 = path.join(__dirname, 'assets', 'rss2.xml');
 const feed = {
