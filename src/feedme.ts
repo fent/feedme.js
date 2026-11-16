@@ -3,12 +3,41 @@ import JSONFeedParser from './jsonfeedparser';
 import type * as parser from './parser';
 import XMLFeedParser from './xmlfeedparser';
 
+const isWhitespaceByte = (byte: number): boolean =>
+  byte === 0x20 || byte === 0x09 || byte === 0x0a || byte === 0x0d;
+
+/**
+ * Strips leading whitespace and UTF-8 BOMs, reporting when only part of a BOM
+ * has arrived so detection can wait for the rest.
+ */
+const stripLeading = (buf: Buffer): { rest: Buffer; partialBom: boolean } => {
+  let i = 0;
+  while (i < buf.length) {
+    if (isWhitespaceByte(buf[i])) {
+      i++;
+      continue;
+    }
+    if (buf[i] === 0xef) {
+      if (buf.length - i < 3) {
+        return { rest: buf.subarray(i), partialBom: true };
+      }
+      if (buf[i + 1] === 0xbb && buf[i + 2] === 0xbf) {
+        i += 3;
+        continue;
+      }
+    }
+    break;
+  }
+  return { rest: buf.subarray(i), partialBom: false };
+};
+
 class FeedMe extends Writable {
   static FeedMe = FeedMe;
   static default = FeedMe;
 
   private _buffer: boolean;
   private _parser: parser.Parser;
+  private _prefix: Buffer[] = [];
 
   /**
    * Creates an instance of a parser. Parser can be JSON/XML.
@@ -41,29 +70,43 @@ class FeedMe extends Writable {
     encoding: BufferEncoding,
     callback: (err?: Error | null) => void,
   ) {
-    const str = data.toString();
-
-    // First find out what type of feed this is.
-    if (!this._parser) {
-      if (/^\s*</.test(str)) {
-        this._parser = new XMLFeedParser(this._buffer);
-        this._proxyEvents();
-      } else if (/^\s*[{[]/.test(str)) {
-        this._parser = new JSONFeedParser(this._buffer);
-        this.emit('type', 'json');
-        this._proxyEvents();
-      } else {
-        callback(new Error('Not a correctly formatted feed'));
-        return;
-      }
+    if (this._parser) {
+      this._parser.write(data, encoding, callback);
+      return;
     }
 
-    this._parser.write(data, encoding, callback);
+    // The feed type may not be decidable from the first chunk, such as when
+    // leading whitespace or a BOM arrives on its own or is split up.
+    this._prefix.push(data);
+    const buffered = Buffer.concat(this._prefix);
+    const { rest, partialBom } = stripLeading(buffered);
+    if (partialBom || rest.length === 0) {
+      callback();
+      return;
+    }
+
+    if (rest[0] === 0x3c) {
+      // <
+      this._parser = new XMLFeedParser(this._buffer);
+    } else if (rest[0] === 0x7b || rest[0] === 0x5b) {
+      // { or [
+      this._parser = new JSONFeedParser(this._buffer);
+      this.emit('type', 'json');
+    } else {
+      callback(new Error('Not a correctly formatted feed'));
+      return;
+    }
+
+    this._proxyEvents();
+    this._prefix = [];
+    this._parser.write(rest, encoding, callback);
   }
 
   _final(callback: (err?: Error | null) => void) {
     if (this._parser) {
       this._parser.end(callback);
+    } else if (Buffer.concat(this._prefix).length) {
+      callback(new Error('Not a correctly formatted feed'));
     } else {
       callback(null);
     }
